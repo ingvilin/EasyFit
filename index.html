@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>daginge.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="jquery.css" />
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+    <script src="sha1.js"></script>
+    <script src="oauth.js"></script>
+       
+        <!-- phonegap -->
+		<script src="phonegap-1.0.0.js"></script>
+	    <!-- phonegap facebook plugin -->
+		<script src="pg-plugin-fb-connect.js"></script>
+	    <!-- facebook js sdk -->
+		<script src="facebook_js_sdk.js"></script>
+		<!-- <script src="http://connect.facebook.net/en_US/all.js"></script> -->
+		<!-- BSSID plugin -->
+		<script src="wifibssid.js"></script>
+
+    <script src="application.js"></script>
+        
+        
+  </head>
+  <body>
+    <div data-role="page" id="main" data-theme="r">
+      <div data-role="header" >
+	  <div class="ui-grid-b">
+		<div class="ui-block-a">
+			<div class="" style="padding-top:10px; height:10px;" align="center"><a href="https://www.uka.no/"><img src="uka.png" width="70" height="20"></a></div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a" style="padding-top:10px; height:32px;" align="center"> <h6>Trygt hjem </h6></div>
+		</div>
+		<div class="ui-block-c">
+			<div class="ui-bar ui-bar-a" style="height:40px" align="right"> <a onClick="refresh();"><img src="refresh-icon.png" width="20" height="20"></a></div>
+		</div>
+	</div>
+	  </div>
+      <div data-role="content" id="one">
+	  <table align="center">
+		<tr><td align="center"><a href="#friends"><img src="logo1.png"  height="100"></a></td></tr>
+		<tr><td align="center"><a href="#nattbuss"><img src="buss.png" height="100"></a></td></tr>
+        <tr><td align="center"><a href="tel:02393"><img src="taxi.png" height="100"> </a></td></tr>
+      </table>
+	  </div>
+	  <div data-role="footer">
+        <h5>Gjør det magisk</h5>
+      </div>
+    </div>
+    <div data-role="page" id="friends" data-theme="r">
+      <div data-role="header">
+      	<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<div class="" style="padding-top:15px; height:10px;" align="center"><a href="https://www.uka.no/"><img src="uka.png" width="70" height="20"></a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-a" style=height:40px" align="center"> <h6>Venner på Samfundet</h6></div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-a" style=height:40px" align="right">  <a onClick="refresh();"><img src="refresh-icon.png" width="20" height="20"></a></div>
+			</div>
+      	</div>
+      </div>
+      <div data-role="content">
+         <div id="friends-content" data-role="content">
+      		<p>Laster informasjon... Om ingenting dukker opp, trykk ikonet oppe til høyre for å hente inn ny data.</p>
+        	<div id="facebook-friends">
+			</div>
+      	</div>
+			<p>* sett på Samfundet</p>
+      </div>
+	  <div data-role="footer">
+        <h5>Gjør det magisk</h5>
+      </div>
+    </div>
+    <div data-role="page" id="friend" data-theme="r">
+	  	 <div data-role="header">
+	      	<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<div div class="" style="padding-top:15px; height:10px;" align="center"><a href="https://www.uka.no/"><img src="uka.png" width="70" height="20"></a></div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a" style=height:40px" align="center"> <h6 id="friend-name">N/A</h6></div>
+				</div>
+				<div class="ui-block-c">
+					<div class="ui-bar ui-bar-a" style=height:40px" align="right">  <a onClick="refresh();"><img src="refresh-icon.png" width="20" height="20"></a></div>
+				</div>
+	      	</div>
+	  	</div>
+	  	<div id="friend-content" data-role="content">
+	    	<p>Laster innhold...</p>
+	  	</div>
+	  <div data-role="footer">
+        <h5>Gjør det magisk</h5>
+      </div>
+	</div>
+    <div data-role="page" id="nattbuss" data-theme="r">
+ 		<div data-role="header">
+	      	<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<div class="" style="padding-top:15px; height:10px;" align="center"><a href="https://www.uka.no/"><img src="uka.png" width="70" height="20"></a></div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a" style=height:40px" align="center"> <h6 id="friend-name">Buss-tider</h6></div>
+				</div>
+				<div class="ui-block-c">
+					<div class="ui-bar ui-bar-a" style=height:40px" align="right">  <a><img src="refresh-icon.png" width="20" height="20"></a></div>
+				</div>
+	      	</div>
+	  	</div>
+      <div data-role="content">
+      <p>Busser fra Samfundet til</p>
+        <form id="nattbuss-form" name="chat" action="" method="post" data-theme="a">
+          <div data-role="fieldcontain" >
+            <input type="text" name="query" data-theme="a" id="nattbuss-query" value="" placeholder="Hvor skal du?"/>
+            <div class="ui-grid-a">
+	            <div class="ui-block-a"><a data-role="button" data-theme="a" id="buss-submit">Buss</a></div>
+	            <div class="ui-block-b"><a data-role="button" data-theme="a" id="nattbuss-submit">Nattbuss</a></div>
+            </div>
+          </div>
+        </form>
+        <div id="nattbuss-result"></div>
+      </div>
+    </div>
+  </body>
+</html>
