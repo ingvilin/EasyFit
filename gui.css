@@ -35,14 +35,14 @@
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Helvetica, sans-serif;
 }
 .ui-bar-b .ui-link-inherit {
 	color: 					#333;
 }
 .ui-bar-b .ui-link {
 	color: 					#2489CE;
-	font-weight: bold;
+	font-weight: bold;	
 }
 .ui-body-b {
 	border: 1px solid 		#fff;
@@ -67,8 +67,7 @@
 	color: 					#333333;
 }
 .ui-body-b .ui-link {
-	color: 					#15317E;
-	font-weight: bold;
+	color: 					#fff;
 }
 .ui-btn-up-b {
 	border: 1px solid 		#15317E;
@@ -88,19 +87,20 @@
 	color: 					#333;
 }
 
-/*Kopi av .ui-btn-down-b */
+/*Kopi av .ui-btn-up-b */
 .ui-btn-hover-b {
-	border: 1px solid 		#000000;
-	background: 			#000000;
+	border: 1px solid 		#15317E;
+	background: 			#0000FF; /*woot is this?*/
 	font-weight: bold;
+	/*farge på teksten*/
 	color: 					#fff;
-	text-shadow: 0 1px 1px 	#000;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #000000, #000000); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #000000, #000000); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #000000, #000000); /* IE10 */
-	background-image:      -o-linear-gradient(top, #000000, #000000); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #000000, #000000);
+	text-shadow: 0 1px 1px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#15317E), to(#15317E)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #15317E, #15317E); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #15317E, #15317E); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #15317E, #15317E); /* IE10 */
+	background-image:      -o-linear-gradient(top, #15317E, #15317E); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #15317E, #15317E);
 }
 
 .ui-btn-hover-b a.ui-link-inherit {
@@ -128,6 +128,16 @@
 	font-family: Helvetica, sans-serif;
 	text-decoration: none;
 	font-variant: small-caps;
+}
+.ui-btn-footer-grp {
+	background: 	#15317E;
+	height: 		5em;
+	text-align: center;
+}
+.ui-btn-header-grp {
+	background: 	#15317E;
+	height: 		3em;
+	text-align: center;
 }
 
 /* links within "buttons" 
@@ -166,8 +176,7 @@ a.ui-link-inherit {
 -----------------------------------------------------------------------------------------------------------*/
 
 .ui-btn-inner {
-	border-top: 1px solid 	#fff;
-	border-color: 			rgba(255,255,255,.3);
+	
 }
 
 
@@ -956,6 +965,10 @@ Built by David Kaneda and maintained by Jonathan Stark.
 /* grid d: 20/20/20/20/20 */
 .ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 20%; }
 .ui-grid-d .ui-block-a { clear: left; }
+
+/* Grid in the header grid h: 20/80*/
+.ui-grid-h .ui-block-a { width: 20%; }
+.ui-grid-h .ui-block-b { width: 80% }
 /*
 * jQuery Mobile Framework
 * Copyright (c) jQuery Project
@@ -1008,7 +1021,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
 .ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-bar .ui-btn-inner { padding: .4em 8px .5em; }
 .ui-btn-icon-notext { display: inline-block; width: 20px; height: 20px; padding: 2px 1px 2px 3px; text-indent: -9999px; }
 .ui-btn-icon-notext .ui-btn-inner { padding: 0; }
-.ui-btn-icon-notext .ui-btn-text { position: absolute; left: -999px; }
+.ui-btn-icon-notext .ui-btn-text { position: center; left: -999px; }
 .ui-btn-icon-left .ui-btn-inner { padding-left: 33px; }
 .ui-header .ui-btn-icon-left .ui-btn-inner,
 .ui-footer .ui-btn-icon-left .ui-btn-inner,
