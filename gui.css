@@ -13,7 +13,7 @@
 */
 /* B
 -----------------------------------------------------------------------------------------------------------*/
-#friends a, #friends a:visited, #friends a:hover, #friends a:active {
+#friends b, #friends b:visited, #friends b:hover, #friends b:active {
 	text-decoration: none;
 	color: white;
 }
@@ -49,12 +49,12 @@
 	color: 					#fff;
 	text-shadow: 0 1px 0 	#000;
 	background: 			#fff;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#a1363c), to(#780000)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #a1363c, #780000); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #a1363c, #780000); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #a1363c, #780000); /* IE10 */
-	background-image:      -o-linear-gradient(top, #a1363c, #780000); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #a1363c, #780000);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #fff, #fff); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fff, #fff); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #fff, #fff); /* IE10 */
+	background-image:      -o-linear-gradient(top, #fff, #fff); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fff, #fff);
 }
 .ui-body-b,
 .ui-body-b input,
