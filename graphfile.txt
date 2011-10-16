@@ -1,0 +1,10 @@
+{
+  "graphset" : [
+  {
+    "type" : "line",
+    "series" : [
+     {
+        "values" : [5, 10, 15, 5, 10, 5]
+     }] 
+  }]
+}
