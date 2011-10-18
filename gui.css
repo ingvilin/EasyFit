@@ -23,12 +23,12 @@
 	background: 			#000000;
 	color: 					#0000FF;
 	text-shadow: 0 -1px 0 	#000;	
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#780000 ), to(#7f0000 )); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #780000, #780000); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #981B1E, #981B1E); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #981B1E, #981B1E); /* IE10 */
-	background-image:      -o-linear-gradient(top, #981B1E, #981B1E); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #981B1E, #981B1E);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff ), to(#ffffff )); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ffffff, #ffffff); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #ffffff, #ffffff); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #ffffff, #ffffff); /* IE10 */
+	background-image:      -o-linear-gradient(top, #ffffff, #ffffff); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #ffffff, #ffffff);
 }
 .ui-bar-b,
 .ui-bar-b input,
@@ -641,7 +641,7 @@ a.ui-link-inherit {
 	}
 .ui-header {
 	position: fixed !important; 
-	bottom: 0;
+	top: 0;
 	}
 
 .ui-mobile-touch-overflow.ui-page.ui-native-fixed .ui-footer {
