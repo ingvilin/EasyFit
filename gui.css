@@ -23,12 +23,12 @@
 	background: 			#000000;
 	color: 					#0000FF;
 	text-shadow: 0 -1px 0 	#000;	
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#780000 ), to(#7f0000 )); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #780000, #780000); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #981B1E, #981B1E); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #981B1E, #981B1E); /* IE10 */
-	background-image:      -o-linear-gradient(top, #981B1E, #981B1E); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #981B1E, #981B1E);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff ), to(#fff )); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #fff, #fff); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fff, #fff); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #fff, #fff); /* IE10 */
+	background-image:      -o-linear-gradient(top, #fff, #fff); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fff, #fff);
 }
 .ui-bar-b,
 .ui-bar-b input,
