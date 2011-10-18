@@ -639,6 +639,11 @@ a.ui-link-inherit {
 	position: fixed !important; 
 	bottom: 0;
 	}
+.ui-header {
+	position: fixed !important; 
+	bottom: 0;
+	}
+
 .ui-mobile-touch-overflow.ui-page.ui-native-fixed .ui-footer {
 	top: auto;
 	bottom: 0;
