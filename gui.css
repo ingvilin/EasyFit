@@ -42,7 +42,6 @@
 }
 .ui-bar-b .ui-link {
 	color: 					#2489CE;
-	font-weight: bold;	
 }
 .ui-body-b {
 	border: 1px solid 		#fff;
@@ -130,13 +129,13 @@
 	font-variant: small-caps;
 }
 .ui-btn-footer-grp {
-	background: 	#15317E;
-	height: 		5em;
-	text-align: center;
+	background: 	#000;
+	height: 		4em;
+	text-align: 	middle;
 }
 .ui-btn-header-grp {
 	background: 	#15317E;
-	height: 		3em;
+	height: 		2.3em;
 	text-align: center;
 }
 
