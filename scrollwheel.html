@@ -15,43 +15,37 @@
 	
 	<script type="text/javascript">
         $(document).ready(function () {
-            // Date with external button
-            $('#date1').scroller({ showOnFocus: false });
-            $('#show').click(function() { $('#date1').scroller('show'); return false; });
-            // Time
-            $('#date2').scroller({ preset: 'time' });
-            // Datetime
-            $('#date3').scroller({ preset: 'datetime' });
-
-            var wheels = [{
-                'Label 1': {
-                    1: '<img src="img/siesta-strawberry.png" />',
-                    2: '<img src="img/brilliant-pear.png" />',
-                    3: '<img src="img/roman-grape.png" />',
-                    4: '<img src="img/mute-orange.png" />',
-                    5: '<img src="img/rasta-ananas.png" />'
+			var wheels = [{
+                'Repetisjoner': {
+                    1: 15,
+                    2: 20,
+                    3: 25,
+                    4: 30,
+                    5: 35,
+					6: 40
                 },
-                'Label 2': {
-                    1: '<img src="img/siesta-strawberry.png" />',
-                    2: '<img src="img/brilliant-pear.png" />',
-                    3: '<img src="img/roman-grape.png" />',
-                    4: '<img src="img/mute-orange.png" />',
-                    5: '<img src="img/rasta-ananas.png" />'
+                'Kg': {
+                    1: 10,
+                    2: 15,
+                    3: 20,
+                    4: 25,
+                    5: 30,
+                    6: 35,
+					7: 40
                 },
-                'Label 3': {
-                    1: '<img src="img/siesta-strawberry.png" />',
-                    2: '<img src="img/brilliant-pear.png" />',
-                    3: '<img src="img/roman-grape.png" />',
-                    4: '<img src="img/mute-orange.png" />',
-                    5: '<img src="img/rasta-ananas.png" />'
+                'Serier': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6
                 }
             }];
             $('#custom').scroller({
-                width: 90,
-                wheels: wheels,
                 parseValue: function (s) {
                     if (s !== '') {
-                        var d = s.split(' ');
+                       var d = s.split(' ');
                     }
                     else {
                         var d = [1,1,1];
@@ -59,50 +53,33 @@
                     return d;
                 }
             });
+			/*
+			$('#custom').scroller({
+                formatResult: function (data) {
+                    if (data == '') {
+                       var d = "";
+                    }
+                    else {
+                        var r = data[0];
+						var k = data[1];
+						var s = data[2];
+						var d = r + " x " + k " : " + s;
+                    }
+                    return d;
+                }
+            });
+			*/
             $('#custom').click(function() { $(this).scroller('show'); });
-
-            $('#disable').click(function() {
-                $('#date1').scroller('disable');
-                return false;
-            });
-
-            $('#enable').click(function() {
-                $('#date1').scroller('enable');
-                return false;
-            });
-
-            $('#get').click(function() {
-                alert($('#date1').scroller('getDate'));
-                return false;
-            });
-
-            $('#set').click(function() {
-                $('#date1').scroller('setDate', new Date(), true);
-                return false;
-            });
-
-            $('#theme, #mode').change(function() {
-                var t = $('#theme').val();
-                var m = $('#mode').val();
-                $('#date1').scroller('destroy').scroller({ showOnFocus: false, theme: t, mode: m });
-                $('#date2').scroller('destroy').scroller({ preset: 'time', theme: t, mode: m });
-                $('#date3').scroller('destroy').scroller({ preset: 'datetime', theme: t, mode: m });
-                $('#custom').scroller('option', { theme: t, mode: m });
-            });
+            $('#custom').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
         });
     </script>
 	
   </head>
   <body>
 	<div data-role="page" id="main" data-theme="b">
-		<div data-role="header" >
-			<div class="ui-grid-h">
-				<div class="ui-block-a ui-btn-header-grp ui-btn-text" align="center"> 
-					Tilbakeknapp :D
-				</div>
-				<div class="ui-block-b ui-btn-header-grp ui-btn-text" align="center"> 
-					<a href="http://www.clubfitness.no/"><img src="testlogo.jpg" width="70" height="20"></a>
-				</div>
+		<div data-role="header" class="ui-header ui-bar-f ui-header-fixed ui-fixed-overlay" data-theme="b" role="banner" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Mine Mål
 			</div>
 		</div>
 		
@@ -148,10 +125,9 @@
 					<label for="date3">Datetime</label>
 					<input type="text" name="date3" id="date3" class="mobiscroll" />
 				</div>
-
 				<div data-role="fieldcontain">
-					<label for="custom">Custom (Fruits :D)</label>
-					<input type="text" name="custom" id="custom" class="mobiscroll" value="" />
+                    <label for="custom">Custom (Fruits :D)</label>
+                    <input type="text" name="custom" id="custom" class="mobiscroll" value="" />
 				</div>
 			</form>
 		</div>

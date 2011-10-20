@@ -35,7 +35,7 @@
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	font-family: Helvetica, sans-serif;
+	font-family: Arial;
 }
 .ui-bar-b .ui-link-inherit {
 	color: 					#333;
@@ -48,6 +48,7 @@
 	color: 					#000;
 	text-shadow: 0 1px 0 	#000;
 	background: 			#fff;
+	font-size:				11px;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, #fff, #fff); /* Chrome 10+, Saf5.1+ */
 	background-image:    -moz-linear-gradient(top, #fff, #fff); /* FF3.6 */
@@ -60,7 +61,7 @@
 .ui-body-b select,
 .ui-body-b textarea,
 .ui-body-b button {
-	font-family: Helvetica, sans-serif;
+	font-family: Arial;
 }
 .ui-body-b .ui-link-inherit {
 	color: 					#333333;
@@ -71,7 +72,6 @@
 .ui-btn-up-b {
 	border: 1px solid 		#15317E;
 	background: 			#0000FF; /*woot is this?*/
-	font-weight: bold;
 	/*farge på teksten*/
 	color: 					#fff;
 	text-shadow: 0 1px 1px #000;
@@ -90,7 +90,6 @@
 .ui-btn-hover-b {
 	border: 1px solid 		#15317E;
 	background: 			#0000FF; /*woot is this?*/
-	font-weight: bold;
 	/*farge på teksten*/
 	color: 					#fff;
 	text-shadow: 0 1px 1px #000;
@@ -124,28 +123,27 @@
 .ui-btn-up-b,
 .ui-btn-hover-b,
 .ui-btn-down-b {
-	font-family: Helvetica, sans-serif;
+	font-family: Arial;
 	text-decoration: none;
 	font-variant: small-caps;
 }
 .ui-btn-footer-grp {
 	background: 	#000;
-	height: 		4em;
+	height: 		5em;
 	text-align: 	middle;
 }
 .ui-btn-header-grp {
 	background: 	#15317E;
-	height: 		2.3em;
+	height: 		1.5em;
 	text-align: center;
 }
 
 /* Text spacing ? */
 .ui-header-text {	
-	font-weight: bold;
-	font-family: ;
-	font-size: ;
+	font-weight: ;
+	font-family: Arial;
+	font-size: 25px;
 	text-decoration: none;
-	
 }
 /* links within "buttons" 
 -----------------------------------------------------------------------------------------------------------*/
