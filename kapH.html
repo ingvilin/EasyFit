@@ -6,6 +6,80 @@
 		<link rel="stylesheet" href="gui.css" />
 		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+		
+		<script>
+		$(function() {
+			$('#mandag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#tirsdag");
+			});
+		});
+		$(function() {
+			$('#tirsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#mandag");
+			});
+		});
+		$(function() {
+			$('#tirsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#onsdag");
+			});
+		});
+		$(function() {
+			$('#onsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#tirsdag");
+			});
+		});
+		$(function() {
+			$('#onsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#torsdag");
+			});
+		});
+		$(function() {
+			$('#torsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#onsdag");
+			});
+		});
+		$(function() {
+			$('#torsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#fredag");
+			});
+		});
+		$(function() {
+			$('#fredag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#torsdag");
+			});
+		});
+		$(function() {
+			$('#fredag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#lordag");
+			});
+		});
+		$(function() {
+			$('#lordag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#fredag");
+			});
+		});
+		$(function() {
+			$('#lordag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#sondag");
+			});
+		});
+		$(function() {
+			$('#sondag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#lordag");
+			});
+		});
+		$(function() {
+			$('#sondag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#mandag");
+			});
+		});
+		$(function() {
+			$('#mandag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#sondag");
+			});
+		});
+		</script>
+		
 	</head>
   <body>
 	<div data-role="page" id="treningssenter" data-theme="b">
@@ -26,9 +100,9 @@
 				<div class="ui-block-a">KapasitetsIcon</div>
 				<div class="ui-block-b">Ant på treningssenter</div>
 			</div>
-			
-			<image width="100%" src="ukegraf.png" />
-			
+			<a href="#mandag">
+				<image width="100%" src="ukegraf.png"/>	
+			</a>
 		</div>
 		<div data-role="footer" data-id="navbar" role="navigation">
 			<div class="ui-grid-c">
@@ -47,17 +121,26 @@
 			</div>
 		</div>
 	</div>
-	<div data-role="page" id="dag" data-theme="b">
+		<div data-role="page" id="mandag" data-theme="b">
 		<div data-role="header" data-theme="b" style="top: 0px;">
 			<div class="ui-header-text ui-btn-header-grp" align="center"> 
-				Besøkende
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
 			</div>
 		</div>
-		<div>
-			<h2>Søndag</h2>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Mandag</h2>
 		</div>
 		
-		<image src="daggraf"/>
+		<image width="100%" src="daggraf.png"/>
 		
 		<div data-role="footer" data-id="navbar" role="navigation">
 			<div class="ui-grid-c">
@@ -77,5 +160,234 @@
 		</div>
 	</div>
 	
+		<div data-role="page" id="tirsdag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Tirsdag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b"data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<div data-role="page" id="onsdag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Onsdag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b"data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="torsdag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Torsdag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b"data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="fredag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Fredag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b"data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="lordag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Lørdag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b"data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="sondag" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a"><a href="#treningssenter"> Tilbake </a></div>
+					<div class="ui-block-b">
+						Besøkende
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a ui-icon-list">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b"></div>
+		</div>
+		<div align="middle">
+			<h2>Søndag</h2>
+		</div>
+		
+		<image width="100%" src="daggraf.png"/>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b" data-icon="gear" data-iconpos="top">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
   </body>
 </html>
