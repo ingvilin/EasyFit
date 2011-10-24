@@ -40,6 +40,7 @@
 					6: 6
                 }
             }];
+		
             $('#custom').scroller({
                 parseValue: function (s) {
                     if (s !== '') {
@@ -63,10 +64,12 @@
 						var s = data[2];
 						var d = r + " x " + k " : " + s;
                     }
+					consol.log(d);
                     return d;
                 }
             });
 			*/
+	
             $('#custom').click(function() { $(this).scroller('show'); });
             $('#custom').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
         });
@@ -91,8 +94,9 @@
 				<div class="ui-block-a"></div>
 				<div class="ui-block-b"></div>
 			</div>
+			
 			<span data-role="bar" class="ui-bar-b">
-				<div class="ui-grid-c">
+				<div class="ui-grid-b">
 					<div class="ui-block-a">
 						Icon
 					</div>
@@ -108,7 +112,7 @@
 				</div>
 			</span>
 			<span data-role="bar" class="ui-bar-b">
-				<div class="ui-grid-c">
+				<div class="ui-grid-b">
 					<div class="ui-block-a">Icon</div>
 					<div class="ui-block-b"> 
 							Jogging
@@ -122,7 +126,7 @@
 				</div>
 			</span>
 			<span data-role="bar" class="ui-bar-b">
-				<div class="ui-grid-c">
+				<div class="ui-grid-b">
 					<div class="ui-block-a">Icon</div>
 					<div class="ui-block-b"> 
 							Jogging
@@ -135,15 +139,15 @@
 					</div>
 				</div>
 			</span>
-			<div class="ui-grid-b ui-icon-list">
-				<div class="ui-block-a"></div>
-				<div class="ui-block-b">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a">
 					<a href="mineM.html" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false" >Slett</a></div>
-				<div class="ui-block-c">
+				<div class="ui-block-b">
 					<a href="settM.html" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false" >Legg til Mål</a>
 				</div>
 			</div>
-		<div data-role="footer" data-id="navbar" role="navigation">
+		</div>
+		<div data-role="footer" data-id="footer" role="navigation">
 			<div class="ui-grid-c">
 				<div class="ui-block-b ui-btn-footer-grp " data-theme="b">
 					<a href="start.html" data-role="button" data-theme="b" data-icon="gear" data-iconpos="top">Øvelser</a>
