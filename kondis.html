@@ -1,2 +1,62 @@
+<!DOCTYPE HTML>
 <html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="iso-8859-1" />
+    <link rel="stylesheet" href="gui.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+	<script>
+	$(function() {
+		$('#logg-start').bind('swiperight', function(event) { 
+		$.mobile.changePage("#logg-1");
+		});
+	});
+	
+	
+	$(function() {
+		$('#logg-1').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#logg-start");
+		});
+	});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="ovelse1" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h3><a href="#logg-1"><img src="kalender_pil_venstre.png"></a> Torsdag 5. oktober<a href=""><img src="kalender_pil_hoyre.png"></a></h3>
+			</div>
+			<div class="ui-grid-a" >
+				<div class="ui-block-a">
+					<img src="biceps.jpg" width="100%">
+				</div>
+				<div class="ui-block-b">
+				</div>
+			
+	</div>
+	<div data-role="footer" data-id="navbar" role="navigation">
+		<div class="ui-grid-c">
+			<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+				<a href="logg.html" data-role="button" data-theme="b">Øvelser</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="mineM.html" data-role="button" data-theme="b">Mine mål</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="innstilling.html" data-role="button" data-theme="b">Innstillinger</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="kapH.html" data-role="button" data-theme="b">Treningssenter</a>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
