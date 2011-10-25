@@ -199,13 +199,13 @@
             }];
 			
 			$('#date1').scroller({ preset: 'date' });
-			$('#date1').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År",setText: "Lagre", cancelText: "Avbryt" });
+			$('#date1').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", setText: "Lagre", cancelText: "Avbryt" });
 			
 			$('#date2').scroller({ preset: 'date' });
-			$('#date2').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År",setText: "Lagre", cancelText: "Avbryt" });
+			$('#date2').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", setText: "Lagre", cancelText: "Avbryt" });
 			
 			$('#date3').scroller({ preset: 'date' });
-			$('#date3').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År", setText: "Lagre", cancelText: "Avbryt" });
+			$('#date3').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", setText: "Lagre", cancelText: "Avbryt" });
 			
             $('#nokg').scroller({
 				formatResult: function (data) {
@@ -280,7 +280,6 @@
 				<div class="ui-block-a"></div>
 				<div class="ui-block-b"></div>
 			</div>
-			<hr>
 			<span data-role="bar" class="ui-bar-b">
 				<div class="ui-grid-b">
 					<div class="ui-block-a">
@@ -299,45 +298,6 @@
 					</div>
 				</div>
 			</span>
-			<hr>
-			<span data-role="bar" class="ui-bar-b">
-				<div class="ui-grid-b">
-					<div class="ui-block-a">
-						Icon					
-					</div>
-					<div class="ui-block-b"> 
-							Jogging
-							<div class="ui-date-input">
-								<input for="date2" type="text" name="date2" id="date2" class="mobiscroll" readonly="readonly" value="" />
-							</div>
-					</div>
-					<div class="ui-block-c">
-						<div class="ui-input">
-							<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
-						</div>
-					</div>
-				</div>
-			</span>
-			<hr>
-			<span data-role="bar" class="ui-bar-b">
-				<div class="ui-grid-b">
-					<div class="ui-block-a">
-						Icon					
-					</div>
-					<div class="ui-block-b"> 
-						Benkpress
-						<div class="ui-date-input">
-							<input for="date3" type="text" name="date3" id="date3" class="mobiscroll" readonly="readonly" value="" />
-						</div>
-					</div>
-					<div class="ui-block-c">
-						<div class="ui-input">
-							<input for="full" type="text" name="full" id="full" class="mobiscroll" readonly="readonly" value="" />
-						</div>
-					</div>
-				</div>
-			</span>
-			<hr>
 			<div class="ui-grid-a ui-icon-list">
 				<div class="ui-block-a">
 					<a href="mineM.html" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false" >Slett</a>

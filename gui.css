@@ -161,12 +161,22 @@
 	color: #15317E;
 	border: 0 none solid;
 	border-color: transparent;
-	width: 60px;
+	width: 80px;
+	height: 22px;
+}
+.ui-date-input {
+	background-color: ;
+	display: block;
+	font-size: 9px;
+	color: #15317E;
+	border: 0 none solid;
+	border-color: transparent;
+	width: 67px;
 	height: 22px;
 }
 
 .ui-icon-list {
-	height: 50px;
+	height: 85px;
 }
 /* links within "buttons" 
 -----------------------------------------------------------------------------------------------------------*/
@@ -1016,7 +1026,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
 * Dual licensed under the MIT (MIT-LICENSE.txt) or GPL (GPL-LICENSE.txt) licenses.
 */
 /* fixed page header & footer configuration */
-.ui-header, .ui-footer, .ui-page-fullscreen .ui-header, .ui-page-fullscreen .ui-footer  { position: fixed;  overflow: hidden; width: 100%; border-left-width: 0; border-right-width: 0; }
+.ui-header, .ui-footer, .ui-page-fullscreen .ui-header, .ui-page-fullscreen .ui-footer  { position: absolute;  overflow: hidden; width: 100%; border-left-width: 0; border-right-width: 0; }
 .ui-header-fixed, .ui-footer-fixed {
 	z-index: 1000;
 	-webkit-transform: translateZ(0); /* Force header/footer rendering to go through the same rendering pipeline as native page scrolling. */
@@ -1265,9 +1275,9 @@ textarea.ui-input-text { height: 50px; -webkit-transition: height 200ms linear; 
 * Dual licensed under the MIT (MIT-LICENSE.txt) or GPL (GPL-LICENSE.txt) licenses.
 */
 .ui-listview { margin: 0; counter-reset: listnumbering; }
-.ui-content .ui-listview { margin: -15px; }
+.ui-content .ui-listview { margin: -10px; }
 .ui-content .ui-listview-inset { margin: 1em 0;  }
-.ui-listview, .ui-li { list-style:none; padding:0; }
+.ui-listview, .ui-li { list-style: none; padding: 0.5em; }
 .ui-li, .ui-li.ui-field-contain { display: block; margin:0; position: relative; overflow: visible; text-align: left; border-width: 0; border-top-width: 1px; }
 .ui-li .ui-btn-text a.ui-link-inherit { text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
 .ui-li-divider, .ui-li-static { padding: .5em 15px; font-size: 14px; font-weight: bold;  }
