@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="iso-8859-1" />
+    <link rel="stylesheet" href="gui.css" />
+   <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+		
+    
+	
+	<script>
+	
+	$(function() {
+		$('#logg-start').bind('swiperight', function(event) { 
+		$.mobile.changePage("#logg-1");
+		});
+	});
+	
+	
+	$(function() {
+		$('#logg-1').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#logg-start");
+		});
+	});
+	$(function() {
+		$('#logg-1').bind('swiperight', function(event) { 
+		$.mobile.changePage("#logg-2");
+		});
+	});
+	$(function() {
+		$('#logg-1').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#logg-start");
+		});
+	});
+	
+	$(function() {
+		$('#logg-2').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#logg-1");
+		});
+	});
+	</script>
+  </head>
+  <body>
+	<div data-role="page" id="logg-start" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h3><a href="#logg-1"><img src="kalender_pil_venstre.png"></a> Torsdag 5. oktober<a href=""><img src="kalender_pil_hoyre.png"></a></h3>
+			</div>
+			<div class="ui-grid-a" >
+				<div class="ui-block-a">
+					<img src="okt_oppsummeringsbilde.png" width="100%">
+				</div>
+				<div class="ui-block-b" data-scroll="true">
+					<ul data-role="listview" data-split-icon="gear" data-split-theme="b" class="ui-listview">	
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="kapH.html">
+							<img src="jogging.png" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc"></p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Biceps curl</h3>
+							<p class="ui-li-desc">30kgx10:3</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-b">
+							<a href="#logg-1">
+							<img src="biceps.jpg" width="100%">
+							<h3 class="ui-li-heading">Jogging</h3>
+							<p class="ui-li-desc">3km 20min</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-id="navbar" role="navigation">
+		<div class="ui-grid-c">
+			<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+				<a href="logg.html" data-role="button" data-theme="b">Øvelser</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="mineM.html" data-role="button" data-theme="b">Mine mål</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="innstilling.html" data-role="button" data-theme="b">Innstillinger</a>
+			</div>
+			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+				<a href="kapH.html" data-role="button" data-theme="b">Treningssenter</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="logg-1" data-theme="b">
+		<div data-role="header">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+		<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h1><a href="#logg-2"><img src="kalender_pil_venstre.png"></a>Onsdag 4. oktober <a href="#logg-start"><img src="kalender_pil_hoyre.png"></a></h1> 
+			</div>
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<img src="okt_oppsummeringsbilde.png" width="100%">
+				</div>
+				<div class="ui-block-b">
+				</div>	   
+			</fieldset>			
+		</div>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="logg.html" data-role="button" data-theme="b">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="logg-2" data-theme="b">
+		<div data-role="header" class="ui-header ui-bar-f ui-header-fixed ui-fixed-overlay" data-theme="b" role="banner" style="top: 0px;">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+		<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h1><a href=""><img src="kalender_pil_venstre.png"></a>Tirsdag 3. oktober<a href="#logg-1"><img src="kalender_pil_hoyre.png"></a></h1>
+			</div>
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<img src="okt_oppsummeringsbilde.png" width="100%">
+				</div>
+				<div class="ui-block-b">
+				</div>	   
+			</fieldset>			
+		</div>
+		
+		<div data-role="footer" data-id="navbar" role="navigation">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
+					<a href="logg.html" data-role="button" data-theme="b">Øvelser</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="mineM.html" data-role="button" data-theme="b">Mine mål</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="innstilling.html" data-role="button" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
+					<a href="kapH.html" data-role="button" data-theme="b">Treningssenter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
