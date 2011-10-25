@@ -11,7 +11,7 @@
 	
 	$(function() {
 		$('#logg-start').bind('swiperight', function(event) { 
-		alert("skldgnsgælkn");
+		$.mobile.changePage("#logg-1");
 		});
 	});
 	
@@ -41,20 +41,18 @@
   </head>
   <body>
 	<div data-role="page" id="logg-start" data-theme="b">
-		<div data-role="header" data-theme="b">
-			<h1> Øvelser</h1>
-		</div>
+		<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a">
+						<a href="kalender.html" class="ui-link"><img src="kalender.png"></a></div>
+					<div class="ui-block-b">
+						Logg
+					</div>
+				</div>
+			</div>
 		<div data-role="content">
-			<div class="ui-grid-a ui-icon-list">
-				<div class="ui-block-a"></div>
-				<div class="ui-block-b"></div>
-			</div>
-			<div class="ui-bar ui-bar-b" align="center">
-				<h3><a href="#logg-1"><img src="kalender_pil_venstre.png"></a> Torsdag 5. oktober<a href=""><img src="kalender_pil_hoyre.png"></a></h3>
-			</div>
-			<div class="ui-grid-a ui-icon-list">
-				<div class="ui-block-a"></div>
-				<div class="ui-block-b"></div>
+			<div align="middle">
+				<h2>Torsdag 5. okt </a></h2>
 			</div>
 			<div class="ui-grid-a" >
 				<div class="ui-block-a">
@@ -140,16 +138,12 @@
 		</div>
 	</div>
 	<div data-role="page" id="logg-1" data-theme="b">
-		<div data-role="header">
-			<h1> Øvelser</h1>
+		<div class="ui-header-text ui-btn-header-grp" align="center"> 
+			Øvelser
 		</div>
 		<div data-role="content">
-		<div class="ui-grid-a ui-icon-list">
-				<div class="ui-block-a"></div>
-				<div class="ui-block-b"></div>
-			</div>
 			<div class="ui-bar ui-bar-b" align="center">
-				<h1><a href="#logg-2"><img src="kalender_pil_venstre.png"></a>Onsdag 4. oktober <a href="#logg-start"><img src="kalender_pil_hoyre.png"></a></h1> 
+				<h2>Onsdag 4. oktober </h2> 
 			</div>
 			<fieldset class="ui-grid-a">
 				<div class="ui-block-a">
@@ -222,16 +216,12 @@
 	</div>
 	
 	<div data-role="page" id="logg-2" data-theme="b">
-		<div data-role="header" class="ui-header ui-bar-f ui-header-fixed ui-fixed-overlay" data-theme="b" role="banner" style="top: 0px;">
-			<h1> Øvelser</h1>
+		<div class="ui-header-text ui-btn-header-grp" align="center"> 
+			Øvelser
 		</div>
 		<div data-role="content">
-		<div class="ui-grid-a ui-icon-list">
-				<div class="ui-block-a"></div>
-				<div class="ui-block-b"></div>
-			</div>
-			<div class="ui-bar ui-bar-b" align="center">
-				<h1><a href=""><img src="kalender_pil_venstre.png"></a>Tirsdag 3. oktober<a href="#logg-1"><img src="kalender_pil_hoyre.png"></a></h1>
+			<div align="center">
+				<h2>Tirsdag 3. oktober</h2>
 			</div>
 			<fieldset class="ui-grid-a">
 				<div class="ui-block-a">
