@@ -11,7 +11,7 @@
 		<link href="mobiscroll-1.5.1.css" rel="stylesheet" type="text/css"/>
 	
 	<script type="text/javascript">
-			
+		
          $(document).ready(function () {
 			var wheels = [{
                 'Repetisjoner': {
@@ -257,6 +257,7 @@
             });
             $('#full').click(function() { $(this).scroller('show'); });
             $('#full').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+			
 		});
 		
 		/* 
@@ -264,7 +265,7 @@
 		theme = default
 		mode = scroller
 		*/
-		
+
     </script>
 	
 	</head>
@@ -302,7 +303,7 @@
 			<hr>
 			<span data-role="bar" class="ui-bar-b">
 				<div class="ui-grid-b">
-					<div class="ui-block-a">
+					<div id="icon" class="ui-block-a">
 						Icon					
 					</div>
 					<div class="ui-block-b"> 
