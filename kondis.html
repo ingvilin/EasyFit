@@ -7,16 +7,27 @@
 	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 	<script>
+	
 	$(function() {
-		$('#logg-start').bind('swiperight', function(event) { 
-		$.mobile.changePage("#logg-1");
+		$('#ovelse1').bind('swiperight', function(event) { 
+		$.mobile.changePage("#ovelse2");
 		});
 	});
 	
-	
 	$(function() {
-		$('#logg-1').bind('swipeleft', function(event) { 
-		$.mobile.changePage("#logg-start");
+		$('#ovelse2').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#ovelse1");
+		});
+	});
+	$(function() {
+		$('#ovelse2').bind('swiperight', function(event) { 
+		$.mobile.changePage("#ovelse3");
+		});
+	});
+		
+	$(function() {
+		$('#ovelse3').bind('swipeleft', function(event) { 
+		$.mobile.changePage("#ovelse2");
 		});
 	});
 	</script>
@@ -32,7 +43,45 @@
 				<div class="ui-block-b"></div>
 			</div>
 			<div class="ui-bar ui-bar-b" align="center">
-				<h3><a href="#logg-1"><img src="kalender_pil_venstre.png"></a> Torsdag 5. oktober<a href=""><img src="kalender_pil_hoyre.png"></a></h3>
+				<h3><a href="#ovelse2"><img src="kalender_pil_venstre.png"></a> Jogging<a href=""><img src="kalender_pil_hoyre.png"></a></h3>
+			</div>
+			<div class="ui-grid-a" >
+				<div class="ui-block-a">
+					<img src="ukegraf.png" width="100%">
+				</div>
+				<div class="ui-block-b">
+					<img src="info.jpg" width="100%">
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="ovelse2" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h3><a href="#ovelse3"><img src="kalender_pil_venstre.png"></a> Biceps<a href="#ovelse1"><img src="kalender_pil_hoyre.png"></a></h3>
 			</div>
 			<div class="ui-grid-a" >
 				<div class="ui-block-a">
@@ -40,21 +89,59 @@
 				</div>
 				<div class="ui-block-b">
 				</div>
-			
+			</div>
+		</div>
+		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div data-role="footer" data-id="navbar" role="navigation">
-		<div class="ui-grid-c">
-			<div class="ui-block-b ui-btn-footer-grp ui-btn-text" data-theme="b">
-				<a href="logg.html" data-role="button" data-theme="b">Øvelser</a>
+	<div data-role="page" id="ovelse3" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1> Øvelser</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
 			</div>
-			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
-				<a href="mineM.html" data-role="button" data-theme="b">Mine mål</a>
+			<div class="ui-bar ui-bar-b" align="center">
+				<h3><a href=""><img src="kalender_pil_venstre.png"></a> Biceps<a href="#ovelse2"><img src="kalender_pil_hoyre.png"></a></h3>
 			</div>
-			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
-				<a href="innstilling.html" data-role="button" data-theme="b">Innstillinger</a>
+			<div class="ui-grid-a" >
+				<div class="ui-block-a">
+					<img src="biceps.jpg" width="100%">
+				</div>
+				<div class="ui-block-b">
+				</div>
 			</div>
-			<div class="ui-block-b ui-btn-footer-grp" data-theme="b">
-				<a href="kapH.html" data-role="button" data-theme="b">Treningssenter</a>
+		</div>
+		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+			<div class="ui-grid-c">
+				<div class="ui-block-b ui-btn-text" data-theme="b">
+					<a href="start.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+				</div>
 			</div>
 		</div>
 	</div>
