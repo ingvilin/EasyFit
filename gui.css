@@ -1323,7 +1323,7 @@ ol.ui-listview .ui-li-jsnumbering:before { content: "" !important; } /* to avoid
 .ui-li-has-arrow .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-arrow { padding-right: 30px; }
 .ui-li-has-arrow.ui-li-has-count .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-arrow.ui-li-has-count { padding-right: 75px; }
 .ui-li-heading { font-size: 16px; font-weight: bold; display: block; margin: .6em 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  }
-.ui-li-desc {  font-size: 12px; font-weight: normal; display: block; margin: -.5em 0 .6em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ui-li-desc { font-size: 12px; font-weight: normal; display: block; margin: -.5em 0 .6em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .ui-li-thumb, .ui-li-icon { position: absolute; left: 1px; top: 0; max-height: 80px; max-width: 80px; }
 .ui-li-icon { max-height: 40px; max-width: 40px; left: 10px; top: .9em; }
 .ui-li-thumb, .ui-li-icon, .ui-li-content { float: left; margin-right: 10px; }
@@ -1431,44 +1431,44 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 }
 
 .ui-btn-up-c {
-	border: 1px solid 		#ccc;
-	background: 			#eee;
+	
+	background: 			#black;
 	font-weight: bold;
-	color: 					#444;
-	text-shadow: 0 1px 1px #f6f6f6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eee)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #fdfdfd, #eee); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #fdfdfd, #eee); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #fdfdfd, #eee); /* IE10 */
-	background-image:      -o-linear-gradient(top, #fdfdfd, #eee); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #fdfdfd, #eee);
+	color: 					#ffffff;
+	text-shadow: 0 1px 0px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#505050)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #6f6f6f, #505050); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #6f6f6f, #505050); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #6f6f6f, #505050); /* IE10 */
+	background-image:      -o-linear-gradient(top, #6f6f6f, #505050); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #6f6f6f, #505050);
 }
 .ui-btn-up-c a.ui-link-inherit {
-	color: 					#2F3E46;
+	color: 					#ffffff;
 }
 
 .ui-btn-hover-c {
-	border: 1px solid 		#bbb;
-	background: 			#dadada;
+	
+	background: 			#505050;
 	font-weight: bold;
-	color: 					#101010;
-	text-shadow: 0 1px 1px 	#fff;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#dadada)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #ededed, #dadada); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #ededed, #dadada); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #ededed, #dadada); /* IE10 */
-	background-image:      -o-linear-gradient(top, #ededed, #dadada); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #ededed, #dadada);
+	color: 					#ffffff;
+	text-shadow: 0 -1px 0 	#000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#505050)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #505050, #505050); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #505050, #505050); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #505050, #505050); /* IE10 */
+	background-image:      -o-linear-gradient(top, #505050, #505050); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #505050, #505050);
 }
 .ui-btn-hover-c a.ui-link-inherit {
 	color: 					#2F3E46;
 }
 .ui-btn-down-c {
-	border: 1px solid 		#808080;
+	
 	background: 			#fdfdfd;
 	font-weight: bold;
-	color: 					#111111;
-	text-shadow: 0 1px 1px 	#ffffff;
+	color: 					#ffffff;
+	text-shadow: 0 -1px 1px 	#000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fdfdfd)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, #eee, #fdfdfd); /* Chrome 10+, Saf5.1+ */
 	background-image:    -moz-linear-gradient(top, #eee, #fdfdfd); /* FF3.6 */
@@ -1485,4 +1485,9 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 	font-family: Helvetica;
 	text-decoration: none;
 	font-variant: small-caps;
+}
+
+.ui-listview {
+	background: none;
+	
 }
