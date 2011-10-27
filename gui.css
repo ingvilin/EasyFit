@@ -39,7 +39,7 @@
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-bar-b .ui-link-inherit {
 	color: 					;
@@ -75,7 +75,7 @@
 .ui-body-b select,
 .ui-body-b textarea,
 .ui-body-b button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-b .ui-link-inherit {
 	color: 					#333333;
@@ -144,7 +144,7 @@
 .ui-btn-hover-b,
 .ui-btn-down-b,
 .ui-input {
-	font-family: Helvetica;
+	font-family: arial;
 	text-decoration: none;
 	font-variant: small-caps;
 }
@@ -175,7 +175,7 @@
 /* Text spacing ? */
 .ui-header-text {	
 	font-weight: bold;
-	font-family: Helvetica;
+	font-family: arial;
 	font-size: 25px;
 	text-shadow:  0 1px 1px #000;
 	text-decoration: none;
@@ -218,6 +218,7 @@
 .ui-ovelse-list{
 	background: none;
 	opacity: 0.5;
+	font-size: 12pt
 }
 
 /* links within "buttons" 
@@ -1408,7 +1409,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-bar-c select,
 .ui-bar-c textarea,
 .ui-bar-c button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-c {
 	border: 1px solid 		#B3B3B3;
@@ -1427,7 +1428,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-body-c select,
 .ui-body-c textarea,
 .ui-body-c button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-c .ui-link-inherit {
 	color: 					#333333;
@@ -1455,7 +1456,6 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 }
 
 .ui-btn-hover-c {
-	
 	background: 			#505050;
 	font-weight: bold;
 	color: 					#ffffff;
@@ -1471,9 +1471,8 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 	color: 					#2F3E46;
 }
 .ui-btn-down-c {
-	
 	background: 			#fdfdfd;
-	font-weight: bold;
+	font-weight: ;
 	color: 					#ffffff;
 	text-shadow: 0 -1px 1px 	#000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fdfdfd)); /* Saf4+, Chrome */
@@ -1489,7 +1488,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-btn-up-c,
 .ui-btn-hover-c,
 .ui-btn-down-c {
-	font-family: Helvetica;
+	font-family: arial;
 	text-decoration: none;
 	font-variant: small-caps;
 }
