@@ -7,42 +7,47 @@
 		<script src="jquery.ui.datepicker.mobile.js"></script>
 		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+		
 		<script>
-	$(function() {
-		$('#kalender').bind('swiperight', function(event) { 
-		$.mobile.changePage("#september");
-		});
-	});
-	$(function() {
-		$('#november').bind('swipe', function(event) { 
-		$.mobile.changePage("#kalender");
-		});
-	});
-	$(function() {
-		$('#september').bind('swipeleft', function(event) { 
-		$.mobile.changePage("#kalender");
-		});
-	});
-	$(function() {
-		$('#kalender').bind('swipeleft', function(event) { 
-		$.mobile.changePage("#november");
-		});
-	});
-	</script>
+			$(function() {
+				$('#kalender').bind('swiperight', function(event) { 
+				$.mobile.changePage("#september");
+				});
+			});
+			$(function() {
+				$('#november').bind('swipe', function(event) { 
+				$.mobile.changePage("#kalender");
+				});
+			});
+			$(function() {
+				$('#september').bind('swipeleft', function(event) { 
+				$.mobile.changePage("#kalender");
+				});
+			});
+			$(function() {
+				$('#kalender').bind('swipeleft', function(event) { 
+				$.mobile.changePage("#november");
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div data-role="page" id="kalender" data-theme="b">
 			<div data-role="" data-theme="b" style="top: 0px;">
-			<div class="ui-header-text ui-btn-header-grp" align="center"> 
-				Kalender
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Kalender
+				</div>
 			</div>
-		</div>>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
 			<div data-role="content">
 				<div id="dp1319374636049" class="hasDatepicker">
 					<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
 						<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
 							<div class="ui-datepicker-title">
-								October 2011
+								<h3>October 2011</h3>
 							</div>
 						</div>
 						<table class="ui-datepicker-calendar">
@@ -69,7 +74,6 @@
 								</td></tr>
 								
 								<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
-
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
 									<a class="ui-state-default ui-btn ui-btn-up-c" href="logg.html" data-theme="c">3</a></td>
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
@@ -150,17 +154,25 @@
 			</div>
 		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
 			<div class="ui-grid-c">
-				<div class="ui-block-b ui-btn-text" data-theme="b">
-					<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+				<div class="ui-block-b" data-theme="b">
+					<a href="logg.html">
+						<image width="77%" src="images/logg.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+					<a href="mineM.html">
+						<image width="77%" src="images/mal_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+					<a href="innstilling.html">
+						<image width="77%" src="images/innstillinger_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+					<a href="kapH.html">
+						<image width="77%" src="images/studio_dif.png"/>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -168,16 +180,20 @@
 		</div>
 		<div data-role="page" id="november" data-theme="b">
 			<div data-role="" data-theme="b" style="top: 0px;">
-			<div class="ui-header-text ui-btn-header-grp" align="center"> 
-				Kalender
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Kalender
+				</div>
 			</div>
-		</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
 			<div data-role="content">
 				<div id="dp1319374636049" class="hasDatepicker">
 					<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
 						<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
 							<div class="ui-datepicker-title">
-								November 2011
+								<h3>November 2011</h3>
 							</div>
 						</div>
 						<table class="ui-datepicker-calendar">
@@ -276,34 +292,45 @@
 			</div>
 			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
 				<div class="ui-grid-c">
-					<div class="ui-block-b ui-btn-text" data-theme="b">
-						<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+					<div class="ui-block-b" data-theme="b">
+						<a href="logg.html">
+							<image width="77%" src="images/logg.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+						<a href="mineM.html">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+						<a href="innstilling.html">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+						<a href="kapH.html">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
 		<div data-role="page" id="september" data-theme="b">
 			<div data-role="" data-theme="b" style="top: 0px;">
-			<div class="ui-header-text ui-btn-header-grp" align="center"> 
-				Kalender
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Kalender
+				</div>
 			</div>
-		</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
 			<div data-role="content">
 				<div id="dp1319374636049" class="hasDatepicker">
 					<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
 						<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
 							<div class="ui-datepicker-title">
-								September 2011
+								<h3>September 2011</h3>
 							</div>
 						</div>
 						<table class="ui-datepicker-calendar">
@@ -397,17 +424,25 @@
 			</div>
 			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
 				<div class="ui-grid-c">
-					<div class="ui-block-b ui-btn-text" data-theme="b">
-						<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+					<div class="ui-block-b" data-theme="b">
+						<a href="logg.html">
+							<image width="77%" src="images/logg.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+						<a href="mineM.html">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+						<a href="innstilling.html">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
 					</div>
 					<div class="ui-block-b" data-theme="b">
-						<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+						<a href="kapH.html">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
 					</div>
 				</div>
 			</div>

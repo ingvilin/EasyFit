@@ -50,9 +50,9 @@
 .ui-body-b {
 	border: none  	;
 	color: 					#fff;
-	text-shadow: 0 1px 0 	#fff;
+	text-shadow: none;
 	background: 			#000;
-	font-size:				11px;
+	font-size:				12px;
 	background: #45484d; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
@@ -1046,6 +1046,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
 /* grid c: 25/25/25/25 */
 .ui-grid-c .ui-block-a, .ui-grid-c .ui-block-b, .ui-grid-c .ui-block-c, .ui-grid-c .ui-block-d { width: 25%; }
 .ui-grid-c .ui-block-a { clear: left; }
+.ui-grid-c .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d { margin: 0; padding: 0; border: 0; float: left; min-height: 1px;}
 
 /* grid d: 20/20/20/20/20 */
 .ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 20%; }
@@ -1440,7 +1441,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 
 .ui-btn-up-c {
 	background: 			#black;
-	font-weight: 	bold;
+	font-weight: 	;
 	color: 					#ffffff;
 	text-shadow: 0 1px 0px #000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#505050)); /* Saf4+, Chrome */
@@ -1494,5 +1495,6 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 
 .ui-listview {
 	background: none;
+	padding: 1em;
 	
 }
