@@ -2,34 +2,1776 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8" />
+    <meta charset="iso-8859-1" />
     <link rel="stylesheet" href="gui.css" />
-    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
-    
-  </head>
-  <body>
-	<div data-role="page" id="main" data-theme="b">
-		<div data-role="header" >
-			<div class="ui-grid-b">
-				<div class="" align="center"><a href="http://www.clubfitness.no/"><img src="testlogo.jpg" width="70" height="20"></a></div>
+	<link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" />
+	<link href="mobiscroll-1.5.1.css" rel="stylesheet" type="text/css"/>
+	
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+	<script src="jquery.ui.datepicker.mobile.js"></script>
+	<script src="mobiscroll-1.5.1.js" type="text/javascript"></script>
+	
+	
+	<script>
+		/* Scrollwheel */
+		$(document).ready(function () {
+			var wheels = [{
+                'Repetisjoner': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7,
+					8: 8,
+					9: 9,
+					10: 10,
+					11: 11,
+					12: 12,
+					13: 13,
+					14: 14,
+					15: 15,
+					16: 16,
+					17: 17,
+					18: 18,
+					19: 19,
+					20: 20,
+					21: 21,
+					22: 22,
+					23: 23,
+					24: 24,
+					25: 25,
+					26: 26,
+					27: 27,
+					28: 28,
+					29: 29,
+					30: 30
+                },
+                'Kg': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7,
+					8: 8,
+					9: 9,
+					10: 10,
+					11: 11,
+					12: 12,
+					13: 13,
+					14: 14,
+					15: 15,
+					16: 16,
+					17: 17,
+					18: 18,
+					19: 19,
+					20: 20,
+					21: 21,
+					22: 22,
+					23: 23,
+					24: 24,
+					25: 25,
+					26: 26,
+					27: 27,
+					28: 28,
+					29: 29,
+					30: 30
+                },
+                'Serier': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7
+                }
+            }];
+			var wheelsnokg = [{
+                'Repetisjoner': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7,
+					8: 8,
+					9: 9,
+					10: 10,
+					11: 11,
+					12: 12,
+					13: 13,
+					14: 14,
+					15: 15,
+					16: 16,
+					17: 17,
+					18: 18,
+					19: 19,
+					20: 20,
+					21: 21,
+					22: 22,
+					23: 23,
+					24: 24,
+					25: 25,
+					26: 26,
+					27: 27,
+					28: 28,
+					29: 29,
+					30: 30
+                },
+                'Serier': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7
+                }
+            }];
+			var wheelskondis = [{
+                'Distanse km': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7,
+					8: 8,
+					9: 9,
+					10: 10,
+                },
+                'Tid': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+					6: 6,
+					7: 7,
+					8: 8,
+					9: 9,
+					10: 10,
+					11: 11,
+					12: 12,
+					13: 13,
+					14: 14,
+					15: 15,
+					16: 16,
+					17: 17,
+					18: 18,
+					19: 19,
+					20: 20,
+					21: 21,
+					22: 22,
+					23: 23,
+					24: 24,
+					25: 25,
+					26: 26,
+					27: 27,
+					28: 28,
+					29: 29,
+					30: 30,
+					31: 31,
+					32: 32,
+					33: 33,
+					34: 34,
+					35: 35,
+					36: 36,
+					37: 37,
+					38: 38,
+					39: 39,
+					40: 40,
+					41: 41,
+					42: 42,
+					43: 43,
+					44: 44,
+					45: 45,
+					46: 46,
+					47: 47,
+					48: 48,
+					49: 49,
+					50: 50,
+                }
+            }];
+			
+			$('#date1').scroller({ preset: 'date' });
+			$('#date1').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År",setText: "Lagre", cancelText: "Avbryt" });
+			
+			$('#date2').scroller({ preset: 'date' });
+			$('#date2').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År",setText: "Lagre", cancelText: "Avbryt" });
+			
+			$('#date3').scroller({ preset: 'date' });
+			$('#date3').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År", setText: "Lagre", cancelText: "Avbryt" });
+			
+            $('#nokg').scroller({
+				formatResult: function (data) {
+                   return (data[0] + " : " + data[1]);
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [15,3];
+                    }
+                    return d;
+                }
+            });
+            $('#nokg').click(function() { $(this).scroller('show'); });
+            $('#nokg').scroller('option', { width: 90, wheels: wheelsnokg, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+
+			$('#kondis').scroller({
+				formatResult: function (data) {
+                   return (data[0] + "km : " + data[1] +"min");
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [3,15];
+                    }
+                    return d;
+                }
+            });
+            $('#kondis').click(function() { $(this).scroller('show'); });
+            $('#kondis').scroller('option', { width: 90, wheels: wheelskondis, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+			$('#full').scroller({
+				formatResult: function (data) {
+                   return (data[0] + " * " + data[1] + "kg : " + data[2]);
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [10,15,2];
+                    }
+                    return d;
+                }
+            });
+            $('#full').click(function() { $(this).scroller('show'); });
+            $('#full').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+			
+		});
+		/* 
+		test
+		theme = default
+		mode = scroller
+		*/
+		/* Logg */
+		$(function() {
+			$('#logg-start').bind('swiperight', function(event) { 
+			$.mobile.changePage("#logg-1");
+			});
+		});
+		$(function() {
+			$('#logg-1').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#logg-start");
+			});
+		});
+		$(function() {
+			$('#logg-1').bind('swiperight', function(event) { 
+			$.mobile.changePage("#logg-2");
+			});
+		});
+		$(function() {
+			$('#logg-1').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#logg-start");
+			});
+		});
+		$(function() {
+			$('#logg-2').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#logg-1");
+			});
+		});
+		/* Kalender */
+		$(function() {
+			$('#kalender').bind('swiperight', function(event) { 
+			$.mobile.changePage("#september");
+			});
+		});
+		$(function() {
+			$('#november').bind('swipe', function(event) { 
+			$.mobile.changePage("#kalender");
+			});
+		});
+		$(function() {
+			$('#september').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#kalender");
+			});
+		});
+		$(function() {
+			$('#kalender').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#november");
+			});
+		});
+		/* Øvelser i en økt */
+		$(function() {
+			$('#ovelse1').bind('swiperight', function(event) { 
+			$.mobile.changePage("#ovelse2");
+			});
+		});
+		$(function() {
+			$('#ovelse2').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#ovelse1");
+			});
+		});
+		$(function() {
+			$('#ovelse2').bind('swiperight', function(event) { 
+			$.mobile.changePage("#ovelse3");
+			});
+		});
+		$(function() {
+			$('#ovelse3').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#ovelse2");
+			});
+		});
+		/* Dagsoversikt */
+		$(function() {
+			$('#mandag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#tirsdag");
+			});
+		});
+		$(function() {
+			$('#tirsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#mandag");
+			});
+		});
+		$(function() {
+			$('#tirsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#onsdag");
+			});
+		});
+		$(function() {
+			$('#onsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#tirsdag");
+			});
+		});
+		$(function() {
+			$('#onsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#torsdag");
+			});
+		});
+		$(function() {
+			$('#torsdag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#onsdag");
+			});
+		});
+		$(function() {
+			$('#torsdag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#fredag");
+			});
+		});
+		$(function() {
+			$('#fredag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#torsdag");
+			});
+		});
+		$(function() {
+			$('#fredag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#lordag");
+			});
+		});
+		$(function() {
+			$('#lordag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#fredag");
+			});
+		});
+		$(function() {
+			$('#lordag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#sondag");
+			});
+		});
+		$(function() {
+			$('#sondag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#lordag");
+			});
+		});
+		$(function() {
+			$('#sondag').bind('swipeleft', function(event) { 
+			$.mobile.changePage("#mandag");
+			});
+		});
+		$(function() {
+			$('#mandag').bind('swiperight', function(event) { 
+			$.mobile.changePage("#sondag");
+			});
+		});
+	</script>
+	
+	</head>
+	<body>
+		<div data-role="page" id="logg-start" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Logg
+				</div>
 			</div>
-			<div class="ui-grid-b">
-				<div class="ui-block-a">
-					<a href="index.html" data-role="button" data-theme="b">Button</a>
+			<div data-role="content">
+				<div align="center">
+					<a href="#kalender" ><h2>Torsdag 5. okt</h2> </a>
 				</div>
-				<div class="ui-block-b">
-					<a href="index.html" data-role="button" data-theme="b">Button</a>
-				</div>
-				<div class="ui-block-c">
-					<a href="index.html" data-role="button" data-theme="b">Button</a>
+				<img src="images\hele_loggbar.png" width="100%"/>
+				
+				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+					<li data-icon="false">
+						<a href="#ovelse1">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h2>Jogging</h2>
+						<p class="ui-li-desc"></p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="#ovelse2">
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Biceps curl</h3>
+						<p class="ui-li-desc">30kg*10:3</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		 
-		
+		<div data-role="page" id="logg-1" data-theme="b">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a">
+						<a href="#kalender" class="ui-link"><img src="kalender.png"></a></div>
+					<div class="ui-block-b">
+						Logg
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-bar ui-bar-b" align="center">
+					<h2>Onsdag 4. oktober </h2> 
+				</div>
+				<img src="images\hele_loggbar.png" width="100%"/>
+				
+				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+					<li data-icon="false">
+						<a href="#logg-start">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h2>Jogging</h2>
+						<p class="ui-li-desc"></p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Biceps curl</h3>
+						<p class="ui-li-desc">30kg*10:3</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+				</ul>		
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="logg-2" data-theme="b">
+
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				<div class="ui-grid-h">
+					<div class="ui-block-a">
+						<a href="#kalender" class="ui-link"><img src="kalender.png"></a></div>
+					<div class="ui-block-b">
+						Logg
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-bar ui-bar-b"  align="center">
+					<h2>Tirsdag 3. oktober</h2>
+				</div>
+				<img src="images\hele_loggbar.png" width="100%"/>
+				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+					<li data-icon="false">
+						<a href="#logg-start">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h2>Jogging</h2>
+						<p class="ui-li-desc"></p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Biceps curl</h3>
+						<p class="ui-li-desc">30kg*10:3</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+					<li data-icon="false" >
+						<a href="">
+						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+						<h3>Jogging</h3>
+						<p class="ui-li-desc">3km 20min</p>
+						</a>
+					</li>
+				</ul>		
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="kalender" data-theme="b">
+				<div data-role="" data-theme="b" style="top: 0px;">
+					<div class="ui-header-text ui-btn-header-grp" align="center"> 
+						Kalender
+					</div>
+				</div>
+				<div class="ui-grid-a ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+				</div>
+				<div data-role="content">
+					<div id="dp1319374636049" class="hasDatepicker">
+						<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
+							<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
+								<div class="ui-datepicker-title">
+									<h3>October 2011</h3>
+								</div>
+							</div>
+							<table class="ui-datepicker-calendar">
+								<thead>
+									<tr>
+										<th class="ui-bar-c"><span title="Mandag">Man</span></th>
+										<th class="ui-bar-c"><span title="Tirsdag">Tir</span></th>
+										<th class="ui-bar-c"><span title="Onsdag">Ons</span></th>
+										<th class="ui-bar-c"><span title="Torsdag">Tor</span></th>
+										<th class="ui-bar-c"><span title="Fredag">Fre</span></th>
+										<th class="ui-bar-c"><span title="Lordag">Lør</span></th>
+										<th class="ui-bar-c"><span title="Sondag">Søn</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">25</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">26</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">27</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">28</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">29</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">30</span></td><td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">1</a>
+									</td></tr>
+									
+									<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-start" data-theme="c">3</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-start" data-theme="c">4</a></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-start" data-theme="c">5</a></td>
+										
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">6</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">7</span></td>
+									
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">8</a></td></tr><tr>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">10</a></td>	
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">12</a></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">13</span></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">14</span></td>
+									
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">15</a>
+								</td></tr><tr>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">16</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">17</span></td>
+									
+									<td class="ui-datepicker-current-day ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-state-active ui-btn ui-btn-up-c ui-btn-active" href="#" data-theme="c">18</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">20</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">21</a></td>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">22</a></td></tr><tr>
+									<td class="ui-datepicker-week-end  ui-datepicker-today ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-state-highlight ui-btn ui-btn-up-c ui-btn-up-e" href="#" data-theme="c">23</a></td>
+										
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">25</a></td>
+										
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">27</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">28</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">29</span></td></tr><tr>
+									
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">30</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">31</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">3</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">4</span></td>
+									<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+									<span class="ui-state-default">5</span></td></tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+					<div class="ui-grid-c">
+						<div class="ui-block-b" data-theme="b">
+							<a href="#logg-start">
+								<image width="77%" src="images/logg.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#mineM">
+								<image width="77%" src="images/mal_dif.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#innstillinger">
+								<image width="77%" src="images/innstillinger_dif.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#treningssenter">
+								<image width="77%" src="images/studio_dif.png"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div data-role="page" id="november" data-theme="b">
+				<div data-role="" data-theme="b" style="top: 0px;">
+					<div class="ui-header-text ui-btn-header-grp" align="center"> 
+						Kalender
+					</div>
+				</div>
+				<div class="ui-grid-a ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+				</div>
+				<div data-role="content">
+					<div id="dp1319374636049" class="hasDatepicker">
+						<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
+							<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
+								<div class="ui-datepicker-title">
+									<h3>November 2011</h3>
+								</div>
+							</div>
+							<table class="ui-datepicker-calendar">
+								<thead>
+									<tr>
+										<th class="ui-bar-c"><span title="Mandag">Man</span></th>
+										<th class="ui-bar-c"><span title="Tirsdag">Tir</span></th>
+										<th class="ui-bar-c"><span title="Onsdag">Ons</span></th>
+										<th class="ui-bar-c"><span title="Torsdag">Tor</span></th>
+										<th class="ui-bar-c"><span title="Fredag">Fre</span></th>
+										<th class="ui-bar-c"><span title="Lordag">Lør</span></th>
+										<th class="ui-bar-c"><span title="Sondag">Søn</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">30</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">31</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">1</a>
+											<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-nov2" data-theme="c">2</a>
+											
+											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">3</span></td>
+
+											<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">5</a></td>
+											<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">6</a></td>	
+									</td></tr>
+									<tr><td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">7</a>
+									</td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">8</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">10</a></td>
+										
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">12</a></td>
+										
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">13</span></td></tr><tr>
+									
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">14</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">15</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">16</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">17</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">18</a></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
+
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">20</span></td>
+
+								</td></tr><tr>
+								
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">21</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">22</a></td>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">23</span></td>
+
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">25</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">26</a></td>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">27</a></td></tr><tr>
+									
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">28</span></td>
+
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">29</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">30</a></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">3</span></td>
+									<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+									<span class="ui-state-default">4</span></td></tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+						<div class="ui-grid-c">
+							<div class="ui-block-b" data-theme="b">
+								<a href="#logg-start">
+									<image width="77%" src="images/logg.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#mineM">
+									<image width="77%" src="images/mal_dif.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#innstillinger">
+									<image width="77%" src="images/innstillinger_dif.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#treningssenter">
+									<image width="77%" src="images/studio_dif.png"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		<div data-role="page" id="september" data-theme="b">
+				<div data-role="" data-theme="b" style="top: 0px;">
+					<div class="ui-header-text ui-btn-header-grp" align="center"> 
+						Kalender
+					</div>
+				</div>
+				<div class="ui-grid-a ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+				</div>
+				<div data-role="content">
+					<div id="dp1319374636049" class="hasDatepicker">
+						<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
+							<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
+								<div class="ui-datepicker-title">
+									<h3>September 2011</h3>
+								</div>
+							</div>
+							<table class="ui-datepicker-calendar">
+								<thead>
+									<tr>
+										<th class="ui-bar-c"><span title="Mandag">Man</span></th>
+										<th class="ui-bar-c"><span title="Tirsdag">Tir</span></th>
+										<th class="ui-bar-c"><span title="Onsdag">Ons</span></th>
+										<th class="ui-bar-c"><span title="Torsdag">Tor</span></th>
+										<th class="ui-bar-c"><span title="Fredag">Fre</span></th>
+										<th class="ui-bar-c"><span title="Lordag">Lør</span></th>
+										<th class="ui-bar-c"><span title="Sondag">Søn</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">28</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">29</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">30</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<span class="ui-state-default">31</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">1</a>
+											<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">2</a></td>
+											<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+											<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">3</a></td>	
+									</td></tr>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">4</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">5</span></td>
+									
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">6</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">7</a></td>
+										<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">8</a></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">10</a></td></tr><tr>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">12</span></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">13</a></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">14</span></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">15</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">16</a></td>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">17</a>
+								</td></tr><tr>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">18</span></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">19</a></td>
+									<td class="ui-datepicker-current-day ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-state-active ui-btn ui-btn-up-c ui-btn-active" href="#" data-theme="c">20</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">21</a></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">22</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">23</span></td>
+									<td class="ui-datepicker-week-end  ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">24</a></td></tr><tr>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">25</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">27</span></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">28</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-sep29" data-theme="c">29</a></td>
+									<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
+										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">30</a></td>
+									<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+									<span class="ui-state-default">1</span></td></tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+						<div class="ui-grid-c">
+							<div class="ui-block-b" data-theme="b">
+								<a href="#logg-start">
+									<image width="77%" src="images/logg.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#mineM">
+									<image width="77%" src="images/mal_dif.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#innstillinger">
+									<image width="77%" src="images/innstillinger_dif.png"/>
+								</a>
+							</div>
+							<div class="ui-block-b" data-theme="b">
+								<a href="#treningssenter">
+									<image width="77%" src="images/studio_dif.png"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div data-role="page" id="ovelse1" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Torsdag 5.okt
+				</div>
+			</div>
+			<div data-role="content">
+				<div align="center">
+					 <h2>Jogging </h2>
+					<image src="images/kondis_graf_utengrad.png" width="90%" />
+				</div>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="ovelse2" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Torsdag 5.okt
+				</div>
+			</div>
+			<div data-role="content">
+				<div align="center">
+					 <h2>Biceps</h2>
+					 <image src="images/styrke_graf_utengrad.png" width="90%" />
+				</div>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="ovelse3" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Torsdag 5.okt
+				</div>
+			</div>
+			<div data-role="content">
+				<div align="center">
+					 <h2>Biceps</h2>
+					 <image src="images/styrke_graf_utengrad.png" width="90%" />
+				</div>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="treningssenter" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Studio
+				</div>
+			</div>
+			<div data-role="content">
+				<div align="middle">
+					<h3>Åpent alle dager: 05.00 - 23.00</h3>
+					<image  width="30%" src="images/personer_pa_studio.png"/>
+					<a href="#mandag">
+						<image width="100%" src="images/NY_mennesker_uke_graf.png"/>	
+					</a>
+					<h4> Gjennomsnittlig antall besøkende per dag siste måned</h4>
+				</div>			
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c" valign="center">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="mandag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Mandag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="tirsdag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Tirsdag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="onsdag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Onsdag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="torsdag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Torsdag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="fredag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+
+			<div align="middle">
+				<h2>Fredag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="lordag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Lørdag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="sondag" data-theme="b">
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Dagsoversikt
+				</div>
+			</div>
+			<div align="middle">
+				<h2>Søndag</h2>
+			</div>
+			
+			<image width="100%" src="images/mennesker_graf_utengrad.png"/>
+			
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="mineM" data-theme="b">
+			<div data-role="" class="ui-header ui-bar-f ui-header-fixed ui-fixed-overlay" data-theme="b" role="banner" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Mine Mål
+				</div>
+			</div>
+			<div data-role="content" class="ui-content" role="main">
+				<div class="ui-grid-a ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+				</div>
+				<div class="ui-grid-b ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+					<div class="ui-block-c">
+						<a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left">Legg til mål</a>
+					</div>
+				</div>
+				
+				<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div class="ui-block-a">
+							<image width="50%" src="images/styrke_ikon.png"/>
+						</div>
+						<div class="ui-block-b"> 
+								Pull ups
+								<div class="ui-date-input">
+									<input for="date1" type="text" name="date1" id="date1" class="mobiscroll" readonly="readonly" value="" />
+								</div>
+						</div>
+						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
+						<div class="ui-block-d">
+							<div class="ui-input">
+								<input for="nokg" type="text" name="nokg" id="nokg" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+					</div>
+				</span>
+				<hr>
+				<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div id="icon" class="ui-block-a">
+							<image width="50%" src="images/kondis_ikon.png"/>				
+						</div>
+						<div class="ui-block-b"> 
+								Jogging
+								<div class="ui-date-input">
+									<input for="date2" type="text" name="date2" id="date2" class="mobiscroll" readonly="readonly" value="" />
+								</div>
+						</div>
+						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
+						<div class="ui-block-d">
+							<div class="ui-input">
+								<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+					</div>
+				</span>
+				<hr>
+				<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div class="ui-block-a">
+							<image width="50%" src="images/styrke_ikon.png"/>				
+						</div>
+						<div class="ui-block-b"> 
+							Benkpress
+							<div class="ui-date-input">
+								<input for="date3" type="text" name="date3" id="date3" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
+						<div class="ui-block-d">
+							<div class="ui-input">
+								<input for="full" type="text" name="full" id="full" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+					</div>
+				</span>
+				<hr>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div data-role="page" id="settO" data-theme="b">
+		<div data-role="" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Armøvelser
+			</div>
+		</div>
+		<div data-role="content">
+			<ul class="ui-listview" data-role="" data-scroll="y"> <!-- Scrolling in the vertical direction -->
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Benk dip </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Cabel biceps curl</h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Cabel triceps pushdown </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Dip </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Drag curl </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Hammer curl </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Pulldown </h3></a></li>
+				<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Beinpress </h3></a></li>
+			</ul>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-b ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+				<div class="ui-block-c">
+					<a href="#mineM" data-role="button" data-inline="true" data-icon="delete" data-iconpos="left" data-corners="false">Avbryt</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+		<div data-role="page" id="settM" data-theme="b">
+		<div data-role="\" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Velg Muskelgruppe
+			</div>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a" align="middle">
+				<div class="ui-block-a"><a href="#settO"><image width="70%" src="images/ikon_hjertet.png"/></a></div>
+				<div class="ui-block-b"><a href="#settO"><image width="70%" src="images/ikon_armer.png"/></a></div>
+			</div>
+			<div class="ui-grid-a" align="middle">
+				<div class="ui-block-a"><a href="#settO"><image width="70%" src="images/ikon_ben.png"/></a></div>
+				<div class="ui-block-b"><a href="#settO"><image width="70%" src="images/ikon_bryst.png"/></a></div>
+			</div>
+			<div class="ui-grid-a" align="middle">
+				<div class="ui-block-a"><a href="#settO"><image width="70%" src="images/ikon_mage.png"/></a></div>
+				<div class="ui-block-b"><a href="#settO"><image width="70%" src="images/ikon_rumpe.png"/></a></div>
+			</div>
+			<div class="ui-grid-a" align="middle">
+				<div class="ui-block-a"><a href="#settO"><image width="70%" src="images/ikon_rygg.png"/></a></div>
+				<div class="ui-block-b"><a href="#settO"><image width="70%" src="images/ikon_skuldre.png"/></a></div>
+			</div>
+
+			<div class="ui-grid-b ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+				<div class="ui-block-c">
+					<a href="#mineM" data-role="button" data-inline="true" data-icon="delete" data-iconpos="left" data-corners="false">Avbryt</a>
+				</div>
+			</div>
+		</div>
 	</div>
-		
-  </body>
+		<div data-role="page" id="innstillinger" data-theme="b">
+		<div data-role="header" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Innstillinger
+			</div>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-icon-list">
+					<label for="language" class="select">Språk:</label>
+				</div>
+				<div class="ui-block-b">						
+					<select name="language" id="language">
+						<option value="norsk">Norsk</option>
+						<option value="english">English</option>
+					</select>
+				</div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a">
+					<label for="language" class="select">Synkronisring:</label>
+				</div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a">
+					<label for="language" class="select">Arkiv:</label>
+				</div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a">
+					<label for="language" class="select">Mitt treningsstudio:</label>
+				</div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+			<div class="ui-grid-a ui-icon-list">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+			</div>
+		</div>
+		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+			<div class="ui-grid-c" valign="center">
+				<div class="ui-block-b" data-theme="b">
+					<a href="#logg-start">
+						<image width="77%" src="images/logg_dif.png"/>
+					</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="#mineM">
+						<image width="77%" src="images/mal_dif.png"/>
+					</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="#innstillinger">
+						<image width="77%" src="images/innstillinger.png"/>
+					</a>
+				</div>
+				<div class="ui-block-b" data-theme="b">
+					<a href="#treningssenter">
+						<image width="77%" src="images/studio_dif.png"/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</body>
 </html>

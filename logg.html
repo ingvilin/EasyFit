@@ -14,8 +14,6 @@
 		$.mobile.changePage("#logg-1");
 		});
 	});
-	
-	
 	$(function() {
 		$('#logg-1').bind('swipeleft', function(event) { 
 		$.mobile.changePage("#logg-start");
@@ -31,7 +29,6 @@
 		$.mobile.changePage("#logg-start");
 		});
 	});
-	
 	$(function() {
 		$('#logg-2').bind('swipeleft', function(event) { 
 		$.mobile.changePage("#logg-1");
@@ -47,265 +44,281 @@
 			</div>
 		</div>
 		<div data-role="content">
-			<div align="center"><h2>Torsdag 5. okt</h2></div>
-			<div>
-				<img src="images\logg_oppsummeringsbilde.png" width="100%"/>
+			<div align="center">
+				<a href="kalender.html" ><h2>Torsdag 5. okt</h2> </a>
+				<img src="images\hele_loggbar.png" width="100%"/>
 			</div>
-				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
-					<li data-icon="false" width="100%" >
-						<a href="kondis.html">
-						<img src="images\kondis_ikon.png" width="100%">
-						<h2>Jogging</h2>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" >
-						<a href="styrke.html">
-						<img src="images\styrke_ikon.png" width="100%">
-						<h3 class="ui-li-heading">Biceps curl</h3>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" >
-						<a href="styrke.html">
-						<img src="images\styrke_ikon.png" width="100%">
-						<h3 class="ui-li-heading">Biceps curl</h3>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" >
-						<a href="styrke.html">
-						<img src="images\styrke_ikon.png" width="100%">
-						<h3 class="ui-li-heading">Biceps curl</h3>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" width="100%" >
-						<a href="kondis.html">
-						<img src="images\kondis_ikon.png" width="100%">
-						<h2>Jogging</h2>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" >
-						<a href="styrke.html">
-						<img src="images\styrke_ikon.png" width="100%">
-						<h3 class="ui-li-heading">Biceps curl</h3>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" width="100%" >
-						<a href="kondis.html">
-						<img src="images\kondis_ikon.png" width="100%">
-						<h2>Jogging</h2>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-					<li data-icon="false" >
-						<a href="styrke.html">
-						<img src="images\styrke_ikon.png" width="100%">
-						<h3 class="ui-li-heading">Biceps curl</h3>
-						<p class="ui-li-desc"></p>
-						</a>
-					</li>
-				</ul>
-			
+			<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+				<li data-icon="false">
+					<a href="kondis.html">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h2>Jogging</h2>
+					<p class="ui-li-desc"></p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+					<h3>Biceps curl</h3>
+					<p class="ui-li-desc">30kg*10:3</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+			</ul>
 		</div>
 		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
-			<div class="ui-grid-c">
-				<div class="ui-block-b ui-btn-text" data-theme="b">
-					<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+			<div class="ui-grid-c" valign="center">
+				<div class="ui-block-b" data-theme="b">
+					<a href="logg.html">
+						<image width="77%" src="images/logg.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+					<a href="mineM.html">
+						<image width="77%" src="images/mal_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+					<a href="innstilling.html">
+						<image width="77%" src="images/innstillinger_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+					<a href="kapH.html">
+						<image width="77%" src="images/studio_dif.png"/>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div data-role="page" id="logg-1" data-theme="b">
-		<div class="ui-header-text ui-btn-header-grp" align="center"> 
-			<div class="ui-grid-h">
-				<div class="ui-block-a">
-					<a href="kalender.html" class="ui-link"><img src="kalender.png"></a></div>
-				<div class="ui-block-b">
-					Logg
-				</div>
+		<div data-role="" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Logg
 			</div>
 		</div>
 		<div data-role="content">
-			<div class="ui-bar ui-bar-b" align="center">
-				<h2>Onsdag 4. oktober </h2> 
+			<div align="center">
+				<a href="kalender.html" ><h2>Onsdag 4. okt</h2> </a>
+				<img src="images\hele_loggbar.png" width="100%"/>
 			</div>
-			<fieldset class="ui-grid-a">
-				<div class="ui-block-a">
-					<img src="okt_oppsummeringsbilde.png" width="100%">
-				</div>
-				<div class="ui-block-b">
-				<ul data-role="listview" data-split-icon="gear" data-split-theme="b" class="ui-listview">	
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="kondis.html">
-							<img src="jogging.png" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc"></p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="styrke.html">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Biceps curl</h3>
-							<p class="ui-li-desc">30kgx10:3</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-					</ul>
-				</div>	   
-			</fieldset>			
+			<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+				<li data-icon="false">
+					<a href="kondis.html">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h2>Jogging</h2>
+					<p class="ui-li-desc"></p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+					<h3>Biceps curl</h3>
+					<p class="ui-li-desc">30kg*10:3</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+			</ul>
 		</div>
 		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
-			<div class="ui-grid-c">
-				<div class="ui-block-b ui-btn-text" data-theme="b">
-					<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+			<div class="ui-grid-c" valign="center">
+				<div class="ui-block-b" data-theme="b">
+					<a href="logg.html">
+						<image width="77%" src="images/logg.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+					<a href="mineM.html">
+						<image width="77%" src="images/mal_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+					<a href="innstilling.html">
+						<image width="77%" src="images/innstillinger_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+					<a href="kapH.html">
+						<image width="77%" src="images/studio_dif.png"/>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	<div data-role="page" id="logg-2" data-theme="b">
-		<div class="ui-header-text ui-btn-header-grp" align="center"> 
-			<div class="ui-grid-h">
-				<div class="ui-block-a">
-					<a href="kalender.html" class="ui-link"><img src="kalender.png"></a></div>
-				<div class="ui-block-b">
-					Logg
-				</div>
+		<div data-role="" data-theme="b" style="top: 0px;">
+			<div class="ui-header-text ui-btn-header-grp" align="center"> 
+				Logg
 			</div>
 		</div>
 		<div data-role="content">
-			<div class="ui-bar ui-bar-b"  align="center">
-				<h2>Tirsdag 3. oktober</h2>
+			<div align="center">
+				<a href="kalender.html" ><h2>Tirsdag 3. okt</h2> </a>
+				<img src="images\hele_loggbar.png" width="100%"/>
 			</div>
-			<fieldset class="ui-grid-a">
-				<div class="ui-block-a">
-					<img src="okt_oppsummeringsbilde.png" width="100%">
-				</div>
-				<div class="ui-block-b">
-				<ul data-role="listview" data-split-icon="gear" data-split-theme="b" class="ui-listview">	
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="kondis.html">
-							<img src="jogging.png" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc"></p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="styrke.html">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Biceps curl</h3>
-							<p class="ui-li-desc">30kgx10:3</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="#logg-1">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-						<li data-theme="b" class="ui-btn ui-btn-icon-right ui-li ui-li-has-arrow ui-btn-up-c">
-							<a href="kondis.html">
-							<img src="biceps.jpg" width="100%">
-							<h3 class="ui-li-heading">Jogging</h3>
-							<p class="ui-li-desc">3km 20min</p>
-							</a>
-						</li>
-					</ul>
-				</div>	   
-			</fieldset>			
+			<ul data-role="listview" class="ui-btn-up-c" width="100%">	
+				<li data-icon="false">
+					<a href="kondis.html">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h2>Jogging</h2>
+					<p class="ui-li-desc"></p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+					<h3>Biceps curl</h3>
+					<p class="ui-li-desc">30kg*10:3</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+				<li data-icon="false" >
+					<a href="">
+					<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+					<h3>Jogging</h3>
+					<p class="ui-li-desc">3km 20min</p>
+					</a>
+				</li>
+			</ul>
 		</div>
-		
 		<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
-			<div class="ui-grid-c">
-				<div class="ui-block-b ui-btn-text" data-theme="b">
-					<a href="logg.html" data-role="button" class="ui-btn-footer-grp" data-icon="star" data-theme="b" data-iconpos="top">Øvelser</a>
+			<div class="ui-grid-c" valign="center">
+				<div class="ui-block-b" data-theme="b">
+					<a href="logg.html">
+						<image width="77%" src="images/logg.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="mineM.html" data-role="button" class="ui-btn-footer-grp" data-icon="plus" data-theme="b" data-iconpos="top">Mine mål</a>
+					<a href="mineM.html">
+						<image width="77%" src="images/mal_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="innstilling.html" data-role="button" class="ui-btn-footer-grp" data-icon="gear" data-iconpos="top" data-theme="b">Innstillinger</a>
+					<a href="innstilling.html">
+						<image width="77%" src="images/innstillinger_dif.png"/>
+					</a>
 				</div>
 				<div class="ui-block-b" data-theme="b">
-					<a href="kapH.html" data-role="button" class="ui-btn-footer-grp" data-icon="home" data-theme="b" data-iconpos="top">Trenings</a>
+					<a href="kapH.html">
+						<image width="77%" src="images/studio_dif.png"/>
+					</a>
 				</div>
 			</div>
 		</div>

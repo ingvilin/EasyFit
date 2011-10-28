@@ -39,7 +39,7 @@
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-bar-b .ui-link-inherit {
 	color: 					;
@@ -50,9 +50,9 @@
 .ui-body-b {
 	border: none  	;
 	color: 					#fff;
-	text-shadow: 0 1px 0 	#fff;
+	text-shadow: none;
 	background: 			#000;
-	font-size:				11px;
+	font-size:				12px;
 	background: #45484d; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
@@ -75,7 +75,7 @@
 .ui-body-b select,
 .ui-body-b textarea,
 .ui-body-b button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-b .ui-link-inherit {
 	color: 					#333333;
@@ -144,7 +144,7 @@
 .ui-btn-hover-b,
 .ui-btn-down-b,
 .ui-input {
-	font-family: Helvetica;
+	font-family: arial;
 	text-decoration: none;
 	font-variant: small-caps;
 }
@@ -175,7 +175,7 @@
 /* Text spacing ? */
 .ui-header-text {	
 	font-weight: bold;
-	font-family: Helvetica;
+	font-family: arial;
 	font-size: 25px;
 	text-shadow:  0 1px 1px #000;
 	text-decoration: none;
@@ -218,6 +218,7 @@
 .ui-ovelse-list{
 	background: none;
 	opacity: 0.5;
+	font-size: 12pt
 }
 
 /* links within "buttons" 
@@ -1045,6 +1046,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
 /* grid c: 25/25/25/25 */
 .ui-grid-c .ui-block-a, .ui-grid-c .ui-block-b, .ui-grid-c .ui-block-c, .ui-grid-c .ui-block-d { width: 25%; }
 .ui-grid-c .ui-block-a { clear: left; }
+.ui-grid-c .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d { margin: 0; padding: 0; border: 0; float: left; min-height: 1px;}
 
 /* grid d: 20/20/20/20/20 */
 .ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 20%; }
@@ -1408,7 +1410,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-bar-c select,
 .ui-bar-c textarea,
 .ui-bar-c button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-c {
 	border: 1px solid 		#B3B3B3;
@@ -1427,7 +1429,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-body-c select,
 .ui-body-c textarea,
 .ui-body-c button {
-	font-family: Helvetica;
+	font-family: arial;
 }
 .ui-body-c .ui-link-inherit {
 	color: 					#333333;
@@ -1438,9 +1440,8 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 }
 
 .ui-btn-up-c {
-	
 	background: 			#black;
-	font-weight: bold;
+	font-weight: 	;
 	color: 					#ffffff;
 	text-shadow: 0 1px 0px #000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#505050)); /* Saf4+, Chrome */
@@ -1455,25 +1456,23 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 }
 
 .ui-btn-hover-c {
-	
-	background: 			#505050;
-	font-weight: bold;
+	background: 			#black;
+	font-weight: 	bold;
 	color: 					#ffffff;
-	text-shadow: 0 -1px 0 	#000;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#505050)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #505050, #505050); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #505050, #505050); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #505050, #505050); /* IE10 */
-	background-image:      -o-linear-gradient(top, #505050, #505050); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #505050, #505050);
+	text-shadow: 0 1px 0px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#505050)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #6f6f6f, #505050); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #6f6f6f, #505050); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #6f6f6f, #505050); /* IE10 */
+	background-image:      -o-linear-gradient(top, #6f6f6f, #505050); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #6f6f6f, #505050);
 }
 .ui-btn-hover-c a.ui-link-inherit {
 	color: 					#2F3E46;
 }
 .ui-btn-down-c {
-	
 	background: 			#fdfdfd;
-	font-weight: bold;
+	font-weight: ;
 	color: 					#ffffff;
 	text-shadow: 0 -1px 1px 	#000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fdfdfd)); /* Saf4+, Chrome */
@@ -1489,12 +1488,13 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-btn-up-c,
 .ui-btn-hover-c,
 .ui-btn-down-c {
-	font-family: Helvetica;
+	font-family: arial;
 	text-decoration: none;
 	font-variant: small-caps;
 }
 
 .ui-listview {
 	background: none;
+	padding: 1em;
 	
 }
