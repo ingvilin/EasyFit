@@ -218,7 +218,7 @@
 			
 			$('#nokg').scroller({
 				formatResult: function (data) {
-                   return (data[0] + " : " + data[1]);
+                   return ( data[1] + " : " + data[0]);
 				}, 
                 parseValue: function (s) {
                     if (s !== '') {
@@ -250,7 +250,7 @@
             $('#kondis').scroller('option', { width: 90, wheels: wheelskondis, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
 			$('#full').scroller({
 				formatResult: function (data) {
-                   return (data[0] + " * " + data[1] + "kg : " + data[2]);
+                   return (data[2] + " : " + data[1] + " x " + data[0] + "kg");
 				}, 
                 parseValue: function (s) {
                     if (s !== '') {
@@ -268,7 +268,7 @@
 			/**/
 			$('#nokg2').scroller({
 				formatResult: function (data) {
-                   return (data[0] + " : " + data[1]);
+                   return ( data[1] + " : " + data[0]);
 				}, 
                 parseValue: function (s) {
                     if (s !== '') {
@@ -284,7 +284,7 @@
             $('#nokg2').scroller('option', { width: 90, wheels: wheelsnokg, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
 			$('#kondis2').scroller({
 				formatResult: function (data) {
-                   return (data[0] + "km : " + data[1] +"min");
+                   return (data[0] + "km : " + data[1] + "min");
 				}, 
                 parseValue: function (s) {
                     if (s !== '') {
@@ -300,7 +300,7 @@
             $('#kondis2').scroller('option', { width: 90, wheels: wheelskondis, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
 			$('#full2').scroller({
 				formatResult: function (data) {
-                   return (data[0] + " * " + data[1] + "kg : " + data[2]);
+                   return (data[2] + " : " + data[1] + " x " + data[0] + "kg");
 				}, 
                 parseValue: function (s) {
                     if (s !== '') {
@@ -471,18 +471,12 @@
 			</div>
 			<div data-role="content">
 				<div align="center"> <p> <font size="5.0"> Lørdag 28. okt &nbsp;</font><a href="#kalender"><img src="images/kalender_ikon.png" width="8%"></a></p></div>
-				<img src="images\hele_loggbar.png" width="100%"/>
+				<img src="images\hele_loggbar2.png" width="100%"/>
 				<ul data-role="listview" class="ui-btn-up-c">	
 					<li data-icon="false" class="logg-list">
 						<a href="#ovelse1">
 							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
 							<h2>Jogging</h2>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="#ovelse2">
-							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-							<h3>Roing</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
@@ -510,6 +504,7 @@
 						</a>
 					</li>
 				</ul>
+				<div class="ui-icon-list"> </div>
 			</div>
 			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
 				<div class="ui-grid-c" valign="center">
@@ -544,7 +539,7 @@
 			</div>
 			<div data-role="content">
 				<div align="center"> <p> <font size="5.0"> Fredag 27. okt &nbsp;</font><a href="#kalender"><img src="images/kalender_ikon.png" width="8%"></a></p></div>
-				<img src="images\hele_loggbar.png" width="100%"/>
+				<img src="images\hele_loggbar2.png" width="100%"/>
 				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
 					<li data-icon="false" class="logg-list">
 						<a href="#ovelse1">
@@ -576,13 +571,7 @@
 						<h3>Nedtrekk</h3>
 						</a>
 					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
-						<h3>Pull up</h3>
-						</a>
-					</li>
-				</ul>		
+				</ul>	
 			</div>
 			
 			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
@@ -618,7 +607,7 @@
 			</div>
 			<div data-role="content">
 				<div align="center"> <p> <font size="5.0"> Torsdag 26. okt &nbsp;</font><a href="#kalender"><img src="images/kalender_ikon.png" width="8%"></a></p></div>
-				<img src="images\hele_loggbar.png" width="100%"/>
+				<img src="images\hele_loggbar2.png" width="100%"/>
 				
 				<ul data-role="listview" class="ui-btn-up-c">	
 					<li data-icon="false" class="logg-list">
@@ -657,7 +646,8 @@
 						<h3>Pull up</h3>
 						</a>
 					</li>
-				</ul>		
+				</ul>
+				<div class="ui-icon-list"> </div>	
 			</div>
 			
 			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
@@ -1002,11 +992,8 @@
 				<div class="ui-grid-b ui-icon-list">
 					<div class="ui-block-a"></div>
 					<div class="ui-block-b"></div>
-					<div class="ui-block-c">
-						<a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false">Legg til mål</a>
-					</div>
+					<div class="ui-block-c"><a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false">Legg til</a></div>
 				</div>
-				
 				<span class="ui-bar-b">
 					<div class="ui-grid-c">
 						<div class="ui-block-a">
@@ -1023,8 +1010,10 @@
 								<input for="nokg" type="text" name="nokg" id="nokg" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
-						<div class="ui-block-d">
-							<image width="40%"src="images/kakediagram.png"/>
+						<div class="ui-block-d" align="center">
+						<a href="#">
+							<image width="50%"src="images/kakediagram_37prosent.png"/>
+						</a>
 						</div>
 					</div>
 				</span>
@@ -1043,8 +1032,10 @@
 						<div class="ui-block-c">
 							<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
 						</div>
-						<div class="ui-block-d">
-							<image width="40%"src="images/kakediagram.png"/>
+						<div class="ui-block-d" align="center">
+							<a href="#ovelse1">
+								<image width="50%"src="images/kakediagram_85prosent.png"/>
+							</a>
 						</div>
 					</div>
 				</span>
@@ -1252,16 +1243,18 @@
 						<div class="ui-block-b"> 
 							Pull ups
 							<div class="ui-date-input">
-								<input for="date5" type="text" name="date5" id="date5" class="mobiscroll" readonly="readonly" value="" />
+								<input for="date1" type="text" name="date1" id="date1" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
 						<div class="ui-block-c">
 							<div class="ui-input">
-								<input for="nokg2" type="text" name="nokg2" id="nokg2" class="mobiscroll" readonly="readonly" value="" />
+								<input for="nokg" type="text" name="nokg" id="nokg" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
-						<div class="ui-block-d">
-							<image width="40%"src="images/kakediagram.png"/>
+						<div class="ui-block-d" align="center">
+						<a href="#">
+							<image width="50%"src="images/kakediagram_37prosent.png"/>
+						</a>
 						</div>
 					</div>
 				</span>
@@ -1274,14 +1267,16 @@
 						<div class="ui-block-b"> 
 							Jogging
 							<div class="ui-date-input">
-								<input for="date3" type="text" name="date3" id="date3" class="mobiscroll" readonly="readonly" value="" />
+								<input for="date2" type="text" name="date2" id="date2" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
 						<div class="ui-block-c">
-							<input for="kondis2" type="text" name="kondis2" id="kondis2" class="mobiscroll" readonly="readonly" value="" />
+							<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
 						</div>
-						<div class="ui-block-d">
-							<image width="40%"src="images/kakediagram.png"/>
+						<div class="ui-block-d" align="center">
+							<a href="#ovelse1">
+								<image width="50%"src="images/kakediagram_85prosent.png"/>
+							</a>
 						</div>
 					</div>
 				</span>
@@ -1300,8 +1295,8 @@
 						<div class="ui-block-c">
 							<input for="full2" type="text" name="full2" id="full2" class="mobiscroll" readonly="readonly" value="" />
 						</div>
-						<div class="ui-block-d">
-							<image width="40%"/>
+						<div class="ui-block-d" align="center">
+							<image width="50%" src="images/kakediagram_0prosent.png"/>
 						</div>	
 					</div>
 				</span>
@@ -1512,7 +1507,7 @@
 										<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">1</a>
 								</td></tr>
 								
-								<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+								<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled ui-body-c"><span class="ui-state-default">2</span></td>
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
 									<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-start" data-theme="c">3</a></td>
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
@@ -1563,14 +1558,14 @@
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
 								
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
-									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">25</a></td>
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-2" data-theme="c">25</a></td>
 									
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
 								
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
-									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">27</a></td>
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-1" data-theme="c">27</a></td>
 								<td class="ui-body-c" onclick="DP_jQuery_1319374636047.datepicker._selectDay('#dp1319374636049',9,2011, this);return false;">
-									<a class="ui-state-default ui-btn ui-btn-up-c" href="#" data-theme="c">28</a></td>
+									<a class="ui-state-default ui-btn ui-btn-up-c" href="#logg-start" data-theme="c">28</a></td>
 								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">29</span></td></tr><tr>
 								
@@ -1652,36 +1647,27 @@
 								<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">6</span></td>
 								</td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">7</span></td>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">8</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
-									
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">10</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
-									
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">12</span></td></tr><tr>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">13</span></td>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">14</span></td>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">15</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">16</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">17</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">18</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
 							</td></tr><tr>
-							
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">20</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">21</span></td>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">22</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">23</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">25</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
 							</td></tr><tr>
-								
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">27</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">28</span></td>
 								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">29</span></td>
@@ -1694,28 +1680,28 @@
 						</table>
 					</div>
 				</div>
-				<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
-					<div class="ui-grid-c">
-						<div class="ui-block-b" data-theme="b">
-							<a href="#logg-start">
-								<image width="77%" src="images/logg.png"/>
-							</a>
-						</div>
-						<div class="ui-block-b" data-theme="b">
-							<a href="#mineM">
-								<image width="77%" src="images/mal_dif.png"/>
-							</a>
-						</div>
-						<div class="ui-block-b" data-theme="b">
-							<a href="#innstillinger">
-								<image width="77%" src="images/innstillinger_dif.png"/>
-							</a>
-						</div>
-						<div class="ui-block-b" data-theme="b">
-							<a href="#treningssenter">
-								<image width="77%" src="images/studio_dif.png"/>
-							</a>
-						</div>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
 					</div>
 				</div>
 			</div>
