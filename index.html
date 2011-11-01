@@ -210,7 +210,13 @@
 			$('#date3').scroller({ preset: 'date' });
 			$('#date3').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År", setText: "Lagre", cancelText: "Avbryt" });
 			
-            $('#nokg').scroller({
+			$('#date4').scroller({ preset: 'date' });
+			$('#date4').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År", setText: "Lagre", cancelText: "Avbryt" });
+            
+			$('#date5').scroller({ preset: 'date' });
+			$('#date5').scroller('destroy').scroller({ preset: 'date', theme: "default", mode: "scroller", dateFormat: "dd/mm/yy", dateOrder: "dd/mm/yy", dayText: "Dag", monthText: "Måned", yearText: "År", setText: "Lagre", cancelText: "Avbryt" });
+			
+			$('#nokg').scroller({
 				formatResult: function (data) {
                    return (data[0] + " : " + data[1]);
 				}, 
@@ -259,7 +265,55 @@
             $('#full').click(function() { $(this).scroller('show'); });
             $('#full').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
 			
-		
+			/**/
+			$('#nokg2').scroller({
+				formatResult: function (data) {
+                   return (data[0] + " : " + data[1]);
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [15,3];
+                    }
+                    return d;
+                }
+            });
+			$('#nokg2').click(function() { $(this).scroller('show'); });
+            $('#nokg2').scroller('option', { width: 90, wheels: wheelsnokg, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+			$('#kondis2').scroller({
+				formatResult: function (data) {
+                   return (data[0] + "km : " + data[1] +"min");
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [3,15];
+                    }
+                    return d;
+                }
+            });
+            $('#kondis2').click(function() { $(this).scroller('show'); });
+            $('#kondis2').scroller('option', { width: 90, wheels: wheelskondis, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
+			$('#full2').scroller({
+				formatResult: function (data) {
+                   return (data[0] + " * " + data[1] + "kg : " + data[2]);
+				}, 
+                parseValue: function (s) {
+                    if (s !== '') {
+                       var d = s.split(' ');
+                    }
+                    else {
+                        var d = [10,15,2];
+                    }
+                    return d;
+                }
+            });
+            $('#full2').click(function() { $(this).scroller('show'); });
+            $('#full2').scroller('option', { width: 90, wheels: wheels, theme: "default", mode: "scroller", setText: "Lagre", cancelText: "Avbryt" });
 			/* 
 			test
 			theme = default
@@ -430,51 +484,32 @@
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="#ovelse2">
-							<img src="images/utengrad_styrke_ikon.png" height="60%"/>
-							<h3>Biceps curl</h3>
-							<p class="ui-li-desc">30kg*10:3</p>
+							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+							<h3>Roing</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Knebøy</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Sittende rotak</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Nedtrekk</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Pull up</h3>
 						</a>
 					</li>
 				</ul>
@@ -519,59 +554,39 @@
 				
 				<ul data-role="listview" class="ui-btn-up-c" width="100%">	
 					<li data-icon="false" class="logg-list">
-						<a href="#logg-start">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h2>Jogging</h2>
-						<p class="ui-li-desc"></p>
+						<a href="#ovelse1">
+							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+							<h2>Jogging</h2>
+						</a>
+					</li>
+					<li data-icon="false" class="logg-list">
+						<a href="#ovelse2">
+							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+							<h3>Roing</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
 						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
-						<h3>Biceps curl</h3>
-						<p class="ui-li-desc">30kg*10:3</p>
+						<h3>Knebøy</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Sittende rotak</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Nedtrekk</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Pull up</h3>
 						</a>
 					</li>
 				</ul>		
@@ -616,59 +631,39 @@
 				
 				<ul data-role="listview" class="ui-btn-up-c">	
 					<li data-icon="false" class="logg-list">
-						<a href="#logg-start">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h2>Jogging</h2>
-						<p class="ui-li-desc"></p>
+						<a href="#ovelse1">
+							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+							<h2>Jogging</h2>
+						</a>
+					</li>
+					<li data-icon="false" class="logg-list">
+						<a href="#ovelse2">
+							<img src="images/utengrad_kondis_ikon.png" height="60%"/>
+							<h3>Roing</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
 						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
-						<h3>Biceps curl</h3>
-						<p class="ui-li-desc">30kg*10:3</p>
+						<h3>Knebøy</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Sittende rotak</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Nedtrekk</h3>
 						</a>
 					</li>
 					<li data-icon="false" class="logg-list">
 						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
-						</a>
-					</li>
-					<li data-icon="false" class="logg-list">
-						<a href="">
-						<img src="images/utengrad_kondis_ikon.png" height="60%"/>
-						<h3>Jogging</h3>
-						<p class="ui-li-desc">3km 20min</p>
+						<img src="images/utengrad_styrke_ikon.png" height="60%"/>
+						<h3>Pull up</h3>
 						</a>
 					</li>
 				</ul>		
@@ -1017,7 +1012,7 @@
 					<div class="ui-block-a"></div>
 					<div class="ui-block-b"></div>
 					<div class="ui-block-c">
-						<a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left">Legg til mål</a>
+						<a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false">Legg til mål</a>
 					</div>
 				</div>
 				
@@ -1032,11 +1027,13 @@
 								<input for="date1" type="text" name="date1" id="date1" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
-						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
-						<div class="ui-block-d">
+						<div class="ui-block-c">
 							<div class="ui-input">
 								<input for="nokg" type="text" name="nokg" id="nokg" class="mobiscroll" readonly="readonly" value="" />
 							</div>
+						</div>
+						<div class="ui-block-d">
+							<image width="40%"src="images/kakediagram.png"/>
 						</div>
 					</div>
 				</span>
@@ -1052,31 +1049,11 @@
 								<input for="date2" type="text" name="date2" id="date2" class="mobiscroll" readonly="readonly" value="" />
 							</div>
 						</div>
-						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
+						<div class="ui-block-c">
+							<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
+						</div>
 						<div class="ui-block-d">
-							<div class="ui-input">
-								<input for="kondis" type="text" name="kondis" id="kondis" class="mobiscroll" readonly="readonly" value="" />
-							</div>
-						</div>
-					</div>
-				</span>
-				<hr/>
-				<span class="ui-bar-b">
-					<div class="ui-grid-c">
-						<div class="ui-block-a">
-							<image width="50%" src="images/styrke_ikon.png"/>				
-						</div>
-						<div class="ui-block-b"> 
-							Benkpress
-							<div class="ui-date-input">
-								<input for="date3" type="text" name="date3" id="date3" class="mobiscroll" readonly="readonly" value="" />
-							</div>
-						</div>
-						<div class="ui-block-c"><image width="40%"src="images/kakediagram.png"/></div>
-						<div class="ui-block-d">
-							<div class="ui-input">
-								<input for="full" type="text" name="full" id="full" class="mobiscroll" readonly="readonly" value="" />
-							</div>
+							<image width="40%"src="images/kakediagram.png"/>
 						</div>
 					</div>
 				</span>
@@ -1115,14 +1092,14 @@
 			</div>
 			<div data-role="content">
 				<ul class="ui-listview" data-role="" data-scroll="y"> <!-- Scrolling in the vertical direction -->
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Benk dip </h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Cabel biceps curl</h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Cabel triceps pushdown </h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Dip </h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Drag curl </h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Hammer curl </h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Biceps curl</h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Concentration curl</h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM4"> <h3>Fransk press </h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Overhead Extension</h3></a></li>
 					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Pulldown </h3></a></li>
-					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Beinpress </h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Pushdown </h3></a></li>
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arror ui-li ui-btn-up-c"> <a href="#mineM"> <h3>Triceps pushdown </h3></a></li>
+					
 				</ul>
 				<div class="ui-grid-a">
 					<div class="ui-block-a"></div>
@@ -1256,6 +1233,112 @@
 				</div>
 			</div>
 		</div>
+		<div data-role="page" id="mineM4" data-theme="b">
+			<div data-role="" class="ui-header ui-bar-f ui-header-fixed ui-fixed-overlay" data-theme="b" role="banner" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Mine Mål
+				</div>
+			</div>
+			<div data-role="content" class="ui-content" role="main">
+				<div class="ui-grid-a ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+				</div>
+				<div class="ui-grid-b ui-icon-list">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"></div>
+					<div class="ui-block-c">
+						<a href="#settM" data-role="button" data-inline="true" data-icon="cross" data-iconpos="left" data-corners="false">Legg til mål</a>
+					</div>
+				</div>
+				
+				<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div class="ui-block-a">
+							<image width="50%" src="images/styrke_ikon.png"/>
+						</div>
+						<div class="ui-block-b"> 
+							Pull ups
+							<div class="ui-date-input">
+								<input for="date5" type="text" name="date5" id="date5" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+						<div class="ui-block-c">
+							<div class="ui-input">
+								<input for="nokg2" type="text" name="nokg2" id="nokg2" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+						<div class="ui-block-d">
+							<image width="40%"src="images/kakediagram.png"/>
+						</div>
+					</div>
+				</span>
+				<hr/>
+				<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div id="icon" class="ui-block-a">
+							<image width="50%" src="images/kondis_ikon.png"/>				
+						</div>
+						<div class="ui-block-b"> 
+							Jogging
+							<div class="ui-date-input">
+								<input for="date3" type="text" name="date3" id="date3" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+						<div class="ui-block-c">
+							<input for="kondis2" type="text" name="kondis2" id="kondis2" class="mobiscroll" readonly="readonly" value="" />
+						</div>
+						<div class="ui-block-d">
+							<image width="40%"src="images/kakediagram.png"/>
+						</div>
+					</div>
+				</span>
+				<hr/>
+					<span class="ui-bar-b">
+					<div class="ui-grid-c">
+						<div class="ui-block-a">
+							<image width="50%" src="images/styrke_ikon.png"/>				
+						</div>
+						<div class="ui-block-b"> 
+							Fransk Press
+							<div class="ui-date-input">
+								<input for="date4" type="text" name="date4" id="date4" class="mobiscroll" readonly="readonly" value="" />
+							</div>
+						</div>
+						<div class="ui-block-c">
+							<input for="full2" type="text" name="full2" id="full2" class="mobiscroll" readonly="readonly" value="" />
+						</div>
+						<div class="ui-block-d">
+							<image width="40%"/>
+						</div>	
+					</div>
+				</span>
+			</div>
+			<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+				<div class="ui-grid-c">
+					<div class="ui-block-b" data-theme="b">
+						<a href="#logg-start">
+							<image width="77%" src="images/logg_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#mineM">
+							<image width="77%" src="images/mal.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#innstillinger">
+							<image width="77%" src="images/innstillinger_dif.png"/>
+						</a>
+					</div>
+					<div class="ui-block-b" data-theme="b">
+						<a href="#treningssenter">
+							<image width="77%" src="images/studio_dif.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>	
 		<div data-role="page" id="ovelse1" data-theme="b">
 			<div data-role="" data-theme="b" style="top: 0px;">
 				<div class="ui-header-text ui-btn-header-grp" align="center"> 
@@ -1507,112 +1590,112 @@
 			</div>
 		</div>
 		<div data-role="page" id="november" data-theme="b">
-				<div data-role="" data-theme="b" style="top: 0px;">
-					<div class="ui-header-text ui-btn-header-grp" align="center"> 
-						Kalender
-					</div>
+			<div data-role="" data-theme="b" style="top: 0px;">
+				<div class="ui-header-text ui-btn-header-grp" align="center"> 
+					Kalender
 				</div>
-				<div data-role="content">
-					<div id="dp1319374636049" class="hasDatepicker">
-						<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
-							<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
-								<div class="ui-datepicker-title">
-									<h3>November 2011</h3>
-								</div>
+			</div>
+			<div data-role="content">
+				<div id="dp1319374636049" class="hasDatepicker">
+					<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="">
+						<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-body-c ui-corner-top">
+							<div class="ui-datepicker-title">
+								<h3>November 2011</h3>
 							</div>
-							<table class="ui-datepicker-calendar">
-								<thead>
-									<tr>
-										<th class="ui-bar-c"><span title="Mandag">Man</span></th>
-										<th class="ui-bar-c"><span title="Tirsdag">Tir</span></th>
-										<th class="ui-bar-c"><span title="Onsdag">Ons</span></th>
-										<th class="ui-bar-c"><span title="Torsdag">Tor</span></th>
-										<th class="ui-bar-c"><span title="Fredag">Fre</span></th>
-										<th class="ui-bar-c"><span title="Lordag">Lør</span></th>
-										<th class="ui-bar-c"><span title="Sondag">Søn</span></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
-											<span class="ui-state-default">30</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
-											<span class="ui-state-default">31</span></td>
-											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
-											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
-											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">3</span></td>
-											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">4</span></td>
-											<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">5</span></td>	
-									</td></tr>
-									<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">6</span></td>
-									</td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">7</span></td>
-									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">8</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
-										
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">10</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
-										
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">12</span></td></tr><tr>
-									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">13</span></td>
-									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">14</span></td>
-									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">15</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">16</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">17</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">18</span></td>
-										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
-								</td></tr><tr>
+						</div>
+						<table class="ui-datepicker-calendar">
+							<thead>
+								<tr>
+									<th class="ui-bar-c"><span title="Mandag">Man</span></th>
+									<th class="ui-bar-c"><span title="Tirsdag">Tir</span></th>
+									<th class="ui-bar-c"><span title="Onsdag">Ons</span></th>
+									<th class="ui-bar-c"><span title="Torsdag">Tor</span></th>
+									<th class="ui-bar-c"><span title="Fredag">Fre</span></th>
+									<th class="ui-bar-c"><span title="Lordag">Lør</span></th>
+									<th class="ui-bar-c"><span title="Sondag">Søn</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+										<span class="ui-state-default">30</span></td><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+										<span class="ui-state-default">31</span></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">3</span></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">4</span></td>
+										<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">5</span></td>	
+								</td></tr>
+								<tr><td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">6</span></td>
+								</td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">7</span></td>
 								
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">20</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">21</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">8</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">9</span></td>
 									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">22</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">23</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">25</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
-								</td></tr><tr>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">10</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">11</span></td>
 									
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">27</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">28</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">29</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">30</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
-									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
-									<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
-									<span class="ui-state-default">4</span></td></tr>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">12</span></td></tr><tr>
+								
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">13</span></td>
+								
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">14</span></td>
+								
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">15</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">16</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">17</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">18</span></td>
+									<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">19</span></td>
+							</td></tr><tr>
+							
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">20</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">21</span></td>
+								
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">22</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">23</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">24</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">25</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">26</span></td>
+							</td></tr><tr>
+								
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">27</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">28</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">29</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">30</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">1</span></td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c"><span class="ui-state-default">2</span></td>
+								<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled  ui-body-c">
+								<span class="ui-state-default">4</span></td></tr>
 							</tbody>
-							</table>
-						</div>
+						</table>
 					</div>
-					<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
-						<div class="ui-grid-c">
-							<div class="ui-block-b" data-theme="b">
-								<a href="#logg-start">
-									<image width="77%" src="images/logg.png"/>
-								</a>
-							</div>
-							<div class="ui-block-b" data-theme="b">
-								<a href="#mineM">
-									<image width="77%" src="images/mal_dif.png"/>
-								</a>
-							</div>
-							<div class="ui-block-b" data-theme="b">
-								<a href="#innstillinger">
-									<image width="77%" src="images/innstillinger_dif.png"/>
-								</a>
-							</div>
-							<div class="ui-block-b" data-theme="b">
-								<a href="#treningssenter">
-									<image width="77%" src="images/studio_dif.png"/>
-								</a>
-							</div>
+				</div>
+				<div data-role="footer" class="ui-btn-footer-grp ui-footer-fixed" data-id="navbar" role="navigation" data-position="fixed">
+					<div class="ui-grid-c">
+						<div class="ui-block-b" data-theme="b">
+							<a href="#logg-start">
+								<image width="77%" src="images/logg.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#mineM">
+								<image width="77%" src="images/mal_dif.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#innstillinger">
+								<image width="77%" src="images/innstillinger_dif.png"/>
+							</a>
+						</div>
+						<div class="ui-block-b" data-theme="b">
+							<a href="#treningssenter">
+								<image width="77%" src="images/studio_dif.png"/>
+							</a>
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
+		</div>	
 		<div data-role="page" id="september" data-theme="b">
 				<div data-role="" data-theme="b" style="top: 0px;">
 					<div class="ui-header-text ui-btn-header-grp" align="center"> 
